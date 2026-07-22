@@ -1,0 +1,87 @@
+﻿{% extends "base.html" %}
+
+{% block style %}
+.head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chip .flag, .chip .flag-fallback { width: 52px; height: 35px; }
+.chip .flag { object-fit: cover; border-radius: 6px; box-shadow: none; }
+.chip .flag-fallback { font-size: 18px; border-radius: 6px; }
+
+.tier-badge {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 12px 24px;
+}
+
+.outlet-block { margin: 56px 0 8px; }
+.outlet {
+  font-size: 76px;
+  line-height: 1.05;
+}
+.outlet-domain {
+  margin-top: 14px;
+  font-size: 29px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.quote-mark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 200px;
+  line-height: 0.6;
+  height: 80px;
+  margin-top: 44px;
+}
+.accent-home-text { color: var(--gold); }
+.accent-away-text { color: var(--teal); }
+
+.summary-wrap {
+  flex: 1;
+  min-height: 0;
+  margin-top: 8px;
+  padding-bottom: 28px;
+}
+.summary {
+  height: 100%;
+  overflow: hidden;
+  font-size: 37px;
+  line-height: 1.52;
+  color: var(--ink);
+}
+{% endblock %}
+
+{% block content %}
+<div class="slide">
+  <div class="head-row">
+    <span class="chip accent-{{ spec.accent }}">
+      {% if spec.iso2 | flag %}<img class="flag" src="{{ spec.iso2 | flag }}" alt="">{% endif %}
+      {{ spec.country }} &bull; prasa
+    </span>
+    {# tier zrodla to informacja wewnetrzna redakcji - nie pokazujemy na grafice #}
+  </div>
+
+  <div class="outlet-block">
+    <div class="outlet display">{{ spec.outlet or spec.headline }}</div>
+    {% if spec.domain %}<div class="outlet-domain">{{ spec.domain }}</div>{% endif %}
+  </div>
+
+  <div class="quote-mark accent-{{ spec.accent }}-text">&ldquo;</div>
+
+  <div class="summary-wrap">
+    <p class="summary fit" data-fit-max="52">{{ spec.body }}</p>
+  </div>
+
+  <div class="footer">
+    <div class="brand"><span>@</span>mundaily_</div>
+    <div>{{ spec.slide_number }}/{{ spec.total }}</div>
+  </div>
+</div>
+{% endblock %}

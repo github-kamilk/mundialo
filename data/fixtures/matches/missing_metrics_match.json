@@ -1,0 +1,39 @@
+{
+  "match_id": "missing_metrics_match",
+  "aliases": [
+    "Lowland United - Coastal City",
+    "test brak metryk"
+  ],
+  "competition": "World Cup 2026",
+  "stage": "group",
+  "date": "2026-06-15",
+  "venue": "Fixture Stadium",
+  "teams": {
+    "home": "Lowland United",
+    "away": "Coastal City"
+  },
+  "score": {
+    "full_time": "2-1",
+    "after_extra_time": null,
+    "penalties": null,
+    "winner": "Lowland United"
+  },
+  "fact_source_ids": [
+    "m_match_result"
+  ],
+  "goals": [],
+  "key_events": [],
+  "evidence": [
+    {
+      "id": "m_match_result",
+      "claim": "Lowland United wygral 2-1.",
+      "value": "2-1",
+      "source_url": "fixture://missing_metrics_match/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-15T00:00:00+02:00",
+      "confidence": "high"
+    }
+  ],
+  "narratives": []
+}

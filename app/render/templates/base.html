@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<style>
+{{ fonts_css }}
+
+:root {
+  --ink: #f2f5fb;
+  --muted: #8e99b3;
+  --line: rgba(255, 255, 255, 0.08);
+  /* paleta per miasto-gospodarz (data/render/city_palettes.json); fallback = klasyka */
+  --gold: {{ spec.palette.accent | default('#e9c46a', true) }};
+  --teal: {{ spec.palette.accent_2 | default('#5dd6c0', true) }};
+  --glow-a: {{ spec.palette.glow_a | default('#1c2b4d', true) }};
+  --glow-b: {{ spec.palette.glow_b | default('#15243f', true) }};
+  --bg-top: {{ spec.palette.bg_top | default('#0d1426', true) }};
+  --bg-bottom: {{ spec.palette.bg_bottom | default('#0a0e1b', true) }};
+  --card: rgba(255, 255, 255, 0.035);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { width: 1080px; height: 1350px; overflow: hidden; }
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1400px 900px at 85% -15%, var(--glow-a) 0%, transparent 62%),
+    radial-gradient(1000px 700px at -10% 110%, var(--glow-b) 0%, transparent 55%),
+    linear-gradient(165deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  position: relative;
+}
+
+/* motyw: kolo srodkowe boiska */
+.pitch-circle {
+  position: absolute;
+  width: 1500px; height: 1500px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  left: 50%; transform: translateX(-50%);
+  pointer-events: none;
+}
+.pitch-line {
+  position: absolute;
+  left: 0; right: 0; height: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.slide {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 84px 88px 64px;
+}
+
+.eyebrow {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.display {
+  font-family: "Archivo", "Inter", "Segoe UI", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+  font-size: 27px;
+  color: var(--muted);
+}
+.footer .brand { font-weight: 600; color: var(--ink); letter-spacing: 0.04em; }
+.footer .brand span { color: var(--gold); }
+
+.flag {
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+  display: block;
+}
+.flag-fallback {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.chip.accent-home { border-color: rgba(233, 196, 106, 0.55); color: var(--gold); }
+.chip.accent-away { border-color: rgba(93, 214, 192, 0.55); color: var(--teal); }
+
+{% block style %}{% endblock %}
+</style>
+</head>
+<body>
+<div class="pitch-circle" style="{{ pitch_style | default('top: -1130px;') }}"></div>
+{% block content %}{% endblock %}
+<script>
+  function fit() {
+    var el = document.querySelector(".fit");
+    if (el) {
+      var size = parseFloat(getComputedStyle(el).fontSize);
+      var max = parseFloat(el.dataset.fitMax || "54");
+      // najpierw rosnij az do przepelnienia lub limitu (krotkie cytaty nie tona w pustce),
+      // potem kurcz do zmieszczenia (dlugie streszczenia)
+      while (el.scrollHeight <= el.clientHeight && size < max) {
+        size += 1;
+        el.style.fontSize = size + "px";
+      }
+      while (el.scrollHeight > el.clientHeight && size > 20) {
+        size -= 1;
+        el.style.fontSize = size + "px";
+      }
+    }
+    document.documentElement.dataset.ready = "1";
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fit);
+  } else {
+    fit();
+  }
+</script>
+</body>
+</html>

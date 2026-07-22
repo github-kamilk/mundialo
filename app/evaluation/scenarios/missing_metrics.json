@@ -1,0 +1,11 @@
+{
+  "id": "missing_metrics",
+  "match_query": "Lowland United - Coastal City",
+  "expected_status": "needs_human_review",
+  "must_have_checks": [],
+  "must_fail_checks": [],
+  "expected_blocking": [
+    "metrics_unavailable"
+  ],
+  "forbidden_terms_in_copy": []
+}

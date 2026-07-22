@@ -1,0 +1,2681 @@
+{
+  "schema_version": "1.0",
+  "description": "Kurowany rejestr zrodel informacyjnych per kraj Mundialu 2026. Dla kazdej reprezentacji: gdzie zajrzec (zaufane outlety + domeny + sekcje) i co przeszukac (lokalne nazwy druzyny + szablony zapytan). Whitelist dla agenta research (Tier C) i zrodlo prawdy dla SourceRegistry.",
+  "notes": [
+    "country MUSI byc identyczne z nazwa reprezentacji w MatchFacts/fixture.",
+    "tier: A = czolowy/oficjalny, B = solidny mainstream, C = pomocniczy.",
+    "domains: whitelist domen outletu (subdomeny dozwolone).",
+    "sections + search_hints to wskazowki dla agenta research.",
+    "confidence: high/medium; verified_at: data web-weryfikacji lub null.",
+    "STATUS: pelny katalog 48 reprezentacji MS 2026 (kurowany, min. 2 outlety/kraj)."
+  ],
+  "countries": [
+    {
+      "country": "Meksyk",
+      "iso2": "MX",
+      "language": "es",
+      "confederation": "CONCACAF",
+      "role": "host",
+      "search_hints": {
+        "team_names": [
+          "Meksyk",
+          "Mexico",
+          "El Tri",
+          "Seleccion Mexicana"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "cronica {team} {opponent} Mundial 2026",
+          "analisis {team} post partido"
+        ],
+        "english_name": "Mexico",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ElUniversalMX",
+          "name": "El Universal",
+          "tier": "A",
+          "domains": [
+            "eluniversal.com.mx"
+          ],
+          "sections": [
+            "https://www.eluniversal.com.mx/deportes/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "ESPNDeportesMX",
+          "name": "ESPN Deportes Mexico",
+          "tier": "A",
+          "domains": [
+            "espn.com.mx"
+          ],
+          "sections": [
+            "https://www.espn.com.mx/futbol/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "RecordMX",
+          "name": "Record",
+          "tier": "B",
+          "domains": [
+            "record.com.mx"
+          ],
+          "sections": [
+            "https://www.record.com.mx/futbol/mexico-1535"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        }
+      ],
+      "display_name": "Meksyk"
+    },
+    {
+      "country": "RPA",
+      "iso2": "ZA",
+      "language": "en",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "RPA",
+          "South Africa",
+          "Bafana Bafana"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "{team} player ratings {opponent}",
+          "{team} World Cup 2026 analysis"
+        ],
+        "english_name": "South Africa",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "News24ZA",
+          "name": "News24",
+          "tier": "A",
+          "domains": [
+            "news24.com"
+          ],
+          "sections": [
+            "https://www.news24.com/sport/soccer"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "SuperSportZA",
+          "name": "SuperSport",
+          "tier": "A",
+          "domains": [
+            "supersport.com"
+          ],
+          "sections": [
+            "https://supersport.com/football/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "IOLZA",
+          "name": "IOL",
+          "tier": "B",
+          "domains": [
+            "iol.co.za"
+          ],
+          "sections": [
+            "https://www.iol.co.za/sport/soccer"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "editorial_note": "Wszystkie trzy outlety sa poludniowoafrykanskie mimo domen .com: News24 (Media24/Naspers, Kapsztad - najwiekszy portal RPA), SuperSport (MultiChoice, Johannesburg - nadawca sportowy), IOL (Independent Online, Kapsztad). TLD nie przesadza o kraju redakcji.",
+      "display_name": "RPA"
+    },
+    {
+      "country": "USA",
+      "iso2": "US",
+      "language": "en",
+      "confederation": "CONCACAF",
+      "role": "host",
+      "search_hints": {
+        "team_names": [
+          "USA",
+          "United States",
+          "USMNT",
+          "Stany Zjednoczone"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "USMNT {opponent} World Cup 2026 analysis",
+          "{team} player ratings {opponent}"
+        ],
+        "english_name": "USA",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ESPNUS",
+          "name": "ESPN",
+          "tier": "A",
+          "domains": [
+            "espn.com"
+          ],
+          "sections": [
+            "https://www.espn.com/soccer/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "SportsIllustratedUS",
+          "name": "Sports Illustrated",
+          "tier": "B",
+          "domains": [
+            "si.com"
+          ],
+          "sections": [
+            "https://www.si.com/soccer"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "USA"
+    },
+    {
+      "country": "Kanada",
+      "iso2": "CA",
+      "language": "en",
+      "confederation": "CONCACAF",
+      "role": "host",
+      "search_hints": {
+        "team_names": [
+          "Kanada",
+          "Canada",
+          "CanMNT",
+          "Les Rouges"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Canada soccer {opponent} World Cup 2026",
+          "{team} player ratings {opponent}"
+        ],
+        "english_name": "Canada",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "CBCSportsCA",
+          "name": "CBC Sports",
+          "tier": "A",
+          "domains": [
+            "cbc.ca"
+          ],
+          "sections": [
+            "https://www.cbc.ca/sports/soccer"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "TSNCA",
+          "name": "TSN",
+          "tier": "A",
+          "domains": [
+            "tsn.ca"
+          ],
+          "sections": [
+            "https://www.tsn.ca/soccer"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "SportsnetCA",
+          "name": "Sportsnet",
+          "tier": "A",
+          "domains": [
+            "sportsnet.ca"
+          ],
+          "sections": [
+            "https://www.sportsnet.ca/soccer/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Kanada"
+    },
+    {
+      "country": "Curaçao",
+      "iso2": "CW",
+      "language": "nl",
+      "confederation": "CONCACAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Curaçao",
+          "Curacao",
+          "The Blue Wave",
+          "Korsou"
+        ],
+        "query_templates": [
+          "{team} {opponent} uitslag",
+          "{team} {opponent} wedstrijd",
+          "{team} reactie pers {opponent}"
+        ],
+        "english_name": "Curacao",
+        "world_cup": "WK 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "AntilliaansDagbladCW",
+          "name": "Antilliaans Dagblad",
+          "tier": "A",
+          "domains": [
+            "ad.cw",
+            "antilliaansdagblad.com"
+          ],
+          "sections": [
+            "https://www.ad.cw/blue-wave"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "AmigoeCW",
+          "name": "Amigoe",
+          "tier": "B",
+          "domains": [
+            "amigoe.com"
+          ],
+          "sections": [
+            "https://www.amigoe.com/sport/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "CuracaoNu",
+          "name": "Curacao.nu",
+          "tier": "B",
+          "language": "nl",
+          "domains": [
+            "curacao.nu"
+          ],
+          "sections": [],
+          "confidence": "high",
+          "verified_at": "2026-06-21"
+        },
+        {
+          "provider_id": "CuracaoChronicle",
+          "name": "Curacao Chronicle",
+          "tier": "B",
+          "language": "en",
+          "domains": [
+            "curacaochronicle.com"
+          ],
+          "sections": [],
+          "confidence": "high",
+          "verified_at": "2026-06-21"
+        }
+      ],
+      "display_name": "Curaçao"
+    },
+    {
+      "country": "Haiti",
+      "iso2": "HT",
+      "language": "fr",
+      "confederation": "CONCACAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Haiti",
+          "Haiti",
+          "Grenadiers",
+          "Selection Haiti"
+        ],
+        "query_templates": [
+          "{team} reaction presse {opponent}",
+          "Haiti football {opponent} Coupe du monde 2026",
+          "analyse {team} {opponent}"
+        ],
+        "english_name": "Haiti",
+        "world_cup": "Coupe du monde 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "LeNouvellisteHT",
+          "name": "Le Nouvelliste",
+          "tier": "A",
+          "domains": [
+            "lenouvelliste.com"
+          ],
+          "sections": [
+            "https://lenouvelliste.com/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "LeNouvellisteSportHT",
+          "name": "Le Nouvelliste - Tout Terrain",
+          "tier": "B",
+          "domains": [
+            "lenouvelliste.com"
+          ],
+          "sections": [
+            "https://lenouvelliste.com/sport"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Haiti"
+    },
+    {
+      "country": "Panama",
+      "iso2": "PA",
+      "language": "es",
+      "confederation": "CONCACAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Panama",
+          "Panama",
+          "Los Canaleros",
+          "Seleccion de Panama"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "Panama {opponent} Mundial 2026",
+          "analisis {team} post partido"
+        ],
+        "english_name": "Panama",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "LaPrensaPA",
+          "name": "La Prensa Panama",
+          "tier": "A",
+          "domains": [
+            "prensa.com"
+          ],
+          "sections": [
+            "https://www.prensa.com/deportes/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "CriticaPA",
+          "name": "Critica",
+          "tier": "B",
+          "domains": [
+            "critica.com.pa"
+          ],
+          "sections": [
+            "https://www.critica.com.pa/deportes/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Panama"
+    },
+    {
+      "country": "Algieria",
+      "iso2": "DZ",
+      "language": "ar",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Algieria",
+          "Algeria",
+          "Les Fennecs",
+          "Equipe nationale Algerie"
+        ],
+        "query_templates": [
+          "{team} reaction presse {opponent}",
+          "Algerie {opponent} Coupe du monde 2026",
+          "analyse {team} {opponent}"
+        ],
+        "english_name": "Algeria",
+        "world_cup": "Coupe du monde 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ElKhabarDZ",
+          "name": "El Khabar",
+          "tier": "A",
+          "domains": [
+            "elkhabar.com"
+          ],
+          "sections": [
+            "https://www.elkhabar.com/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "TSAFootDZ",
+          "name": "Tout sur l'Algerie",
+          "tier": "B",
+          "domains": [
+            "tsa-algerie.com"
+          ],
+          "sections": [
+            "https://www.tsa-algerie.com/sport/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Algieria"
+    },
+    {
+      "country": "Republika Zielonego Przyladka",
+      "iso2": "CV",
+      "language": "pt",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Republika Zielonego Przyladka",
+          "Cabo Verde",
+          "Cape Verde",
+          "Tubaroes Azuis"
+        ],
+        "query_templates": [
+          "{team} repercussao imprensa {opponent}",
+          "Cabo Verde {opponent} Mundial 2026",
+          "analise {team} {opponent}"
+        ],
+        "english_name": "Cape Verde",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "InforpressCV",
+          "name": "Inforpress",
+          "tier": "A",
+          "domains": [
+            "inforpress.cv"
+          ],
+          "sections": [
+            "https://www.inforpress.cv/pt"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "ExpressoIlhasCV",
+          "name": "Expresso das Ilhas",
+          "tier": "B",
+          "domains": [
+            "expressodasilhas.cv"
+          ],
+          "sections": [
+            "https://expressodasilhas.cv/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Republika Zielonego Przylądka"
+    },
+    {
+      "country": "DR Konga",
+      "iso2": "CD",
+      "language": "fr",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "DR Konga",
+          "RD Congo",
+          "Congo DR",
+          "Les Leopards",
+          "DR Congo"
+        ],
+        "query_templates": [
+          "{team} reaction presse {opponent}",
+          "RDC {opponent} Coupe du monde 2026",
+          "analyse {team} {opponent}"
+        ],
+        "english_name": "DR Congo",
+        "world_cup": "Coupe du monde 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "RadioOkapiCD",
+          "name": "Radio Okapi",
+          "tier": "A",
+          "domains": [
+            "radiookapi.net"
+          ],
+          "sections": [
+            "https://www.radiookapi.net/sport"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        },
+        {
+          "provider_id": "ActualiteCD",
+          "name": "Actualite.cd",
+          "tier": "B",
+          "domains": [
+            "actualite.cd"
+          ],
+          "sections": [
+            "https://actualite.cd/category/sport"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        }
+      ],
+      "display_name": "DR Konga"
+    },
+    {
+      "country": "Egipt",
+      "iso2": "EG",
+      "language": "ar",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Egipt",
+          "Egypt",
+          "مصر",
+          "The Pharaohs",
+          "Al Ahly national team"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Egypt {opponent} World Cup 2026",
+          "Egypt football analysis {opponent}"
+        ],
+        "english_name": "Egypt",
+        "world_cup": "كأس العالم 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "KingFutEG",
+          "name": "KingFut",
+          "tier": "B",
+          "domains": [
+            "kingfut.com"
+          ],
+          "sections": [
+            "https://www.kingfut.com/category/egyptian-football/egyptian-national-team/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-22"
+        },
+        {
+          "provider_id": "AhramOnlineEG",
+          "name": "Ahram Online",
+          "tier": "A",
+          "domains": [
+            "english.ahram.org.eg"
+          ],
+          "sections": [
+            "https://english.ahram.org.eg/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "FilGoalEG",
+          "name": "FilGoal",
+          "tier": "A",
+          "domains": [
+            "filgoal.com"
+          ],
+          "sections": [
+            "https://www.filgoal.com/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Egipt"
+    },
+    {
+      "country": "Ghana",
+      "iso2": "GH",
+      "language": "en",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Ghana",
+          "Black Stars"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Ghana {opponent} World Cup 2026",
+          "{team} player ratings {opponent}"
+        ],
+        "english_name": "Ghana",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "GraphicOnlineGH",
+          "name": "Graphic Online",
+          "tier": "A",
+          "domains": [
+            "graphic.com.gh"
+          ],
+          "sections": [
+            "https://www.graphic.com.gh/sports.html"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "GhanaWebGH",
+          "name": "GhanaWeb Sports",
+          "tier": "B",
+          "domains": [
+            "ghanaweb.com"
+          ],
+          "sections": [
+            "https://www.ghanaweb.com/GhanaHomePage/SportsArchive/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Ghana"
+    },
+    {
+      "country": "Wybrzeze Kosci Sloniowej",
+      "iso2": "CI",
+      "language": "fr",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Wybrzeze Kosci Sloniowej",
+          "Cote d'Ivoire",
+          "Ivory Coast",
+          "Les Elephants"
+        ],
+        "query_templates": [
+          "{team} reaction presse {opponent}",
+          "Cote d'Ivoire {opponent} Coupe du monde 2026",
+          "analyse {team} {opponent}"
+        ],
+        "english_name": "Ivory Coast",
+        "world_cup": "Coupe du monde 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "FraterniteMatinCI",
+          "name": "Fraternite Matin",
+          "tier": "A",
+          "domains": [
+            "fratmat.info"
+          ],
+          "sections": [
+            "https://www.fratmat.info/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "AbidjanNetCI",
+          "name": "Abidjan.net",
+          "tier": "B",
+          "domains": [
+            "abidjan.net"
+          ],
+          "sections": [
+            "https://news.abidjan.net/sports/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Wybrzeże Kości Słoniowej"
+    },
+    {
+      "country": "Maroko",
+      "iso2": "MA",
+      "language": "ar",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Maroko",
+          "Morocco",
+          "المغرب",
+          "أسود الأطلس",
+          "Atlas Lions",
+          "Lions de l'Atlas"
+        ],
+        "query_templates": [
+          "{team} reaction presse {opponent}",
+          "المغرب {opponent} كأس العالم 2026",
+          "Maroc {opponent} Coupe du monde 2026"
+        ],
+        "english_name": "Morocco",
+        "world_cup": "كأس العالم 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "HespressMA",
+          "name": "Hespress",
+          "tier": "A",
+          "domains": [
+            "hespress.com"
+          ],
+          "sections": [
+            "https://www.hespress.com/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "Le360MA",
+          "name": "Le360",
+          "tier": "B",
+          "domains": [
+            "le360.ma"
+          ],
+          "sections": [
+            "https://www.le360.ma/sport/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Maroko"
+    },
+    {
+      "country": "Senegal",
+      "iso2": "SN",
+      "language": "fr",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Senegal",
+          "Les Lions de la Teranga",
+          "Teranga Lions"
+        ],
+        "query_templates": [
+          "{team} reaction presse {opponent}",
+          "Senegal {opponent} Coupe du monde 2026",
+          "analyse {team} {opponent}"
+        ],
+        "english_name": "Senegal",
+        "world_cup": "Coupe du monde 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "SenewebSN",
+          "name": "Seneweb",
+          "tier": "A",
+          "domains": [
+            "seneweb.com"
+          ],
+          "sections": [
+            "https://www.seneweb.com/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "DakaractuSN",
+          "name": "Dakaractu",
+          "tier": "B",
+          "domains": [
+            "dakaractu.com"
+          ],
+          "sections": [
+            "https://www.dakaractu.com/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Senegal"
+    },
+    {
+      "country": "Tunezja",
+      "iso2": "TN",
+      "language": "ar",
+      "confederation": "CAF",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Tunezja",
+          "Tunisia",
+          "Les Aigles de Carthage"
+        ],
+        "query_templates": [
+          "{team} reaction presse {opponent}",
+          "Tunisie {opponent} Coupe du monde 2026",
+          "analyse {team} {opponent}"
+        ],
+        "english_name": "Tunisia",
+        "world_cup": "Coupe du monde 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "KapitalisTN",
+          "name": "Kapitalis",
+          "language": "fr",
+          "tier": "A",
+          "domains": [
+            "kapitalis.com"
+          ],
+          "sections": [
+            "https://www.kapitalis.com/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "LaPresseTN",
+          "name": "La Presse de Tunisie",
+          "language": "fr",
+          "tier": "A",
+          "domains": [
+            "lapresse.tn"
+          ],
+          "sections": [
+            "https://www.lapresse.tn/category/sport/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-15"
+        }
+      ],
+      "display_name": "Tunezja"
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "language": "en",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Australia",
+          "Socceroos"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Socceroos {opponent} World Cup 2026",
+          "{team} player ratings {opponent}"
+        ],
+        "english_name": "Australia",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ABCSportAU",
+          "name": "ABC Sport",
+          "tier": "A",
+          "domains": [
+            "abc.net.au"
+          ],
+          "sections": [
+            "https://www.abc.net.au/news/sport/football"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "GuardianAU",
+          "name": "The Guardian Australia",
+          "tier": "B",
+          "domains": [
+            "theguardian.com"
+          ],
+          "sections": [
+            "https://www.theguardian.com/football/australia"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        }
+      ],
+      "display_name": "Australia"
+    },
+    {
+      "country": "Iran",
+      "iso2": "IR",
+      "language": "fa",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Iran",
+          "Team Melli",
+          "ایران",
+          "IR Iran"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Iran {opponent} World Cup 2026",
+          "Team Melli analysis {opponent}"
+        ],
+        "english_name": "Iran",
+        "world_cup": "جام جهانی 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "IRNAIR",
+          "name": "IRNA",
+          "tier": "A",
+          "domains": [
+            "irna.ir"
+          ],
+          "sections": [
+            "https://en.irna.ir/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "Varzesh3IR",
+          "name": "Varzesh3",
+          "tier": "A",
+          "domains": [
+            "varzesh3.com"
+          ],
+          "sections": [
+            "https://www.varzesh3.com/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Iran"
+    },
+    {
+      "country": "Japonia",
+      "iso2": "JP",
+      "language": "ja",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Japonia",
+          "Japan",
+          "Samurai Blue",
+          "Nihon"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Samurai Blue {opponent} World Cup 2026",
+          "Japan football analysis {opponent}"
+        ],
+        "english_name": "Japan",
+        "world_cup": "ワールドカップ 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "NikkanSportsJP",
+          "name": "Nikkan Sports",
+          "tier": "A",
+          "domains": [
+            "nikkansports.com"
+          ],
+          "sections": [
+            "https://www.nikkansports.com/soccer/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "KyodoNewsJP",
+          "name": "Kyodo News",
+          "tier": "B",
+          "domains": [
+            "english.kyodonews.net"
+          ],
+          "sections": [
+            "https://english.kyodonews.net/list/news/sports"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Japonia"
+    },
+    {
+      "country": "Jordania",
+      "iso2": "JO",
+      "language": "ar",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Jordania",
+          "Jordan",
+          "الأردن",
+          "Al Nashama"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Jordan {opponent} World Cup 2026",
+          "Al Nashama analysis {opponent}"
+        ],
+        "english_name": "Jordan",
+        "world_cup": "كأس العالم 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "AlGhadJO",
+          "name": "Al Ghad",
+          "tier": "A",
+          "domains": [
+            "alghad.com"
+          ],
+          "sections": [
+            "https://alghad.com/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "AmmonNewsJO",
+          "name": "Ammon News",
+          "tier": "B",
+          "domains": [
+            "en.ammonnews.net"
+          ],
+          "sections": [
+            "https://en.ammonnews.net/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Jordania"
+    },
+    {
+      "country": "Katar",
+      "iso2": "QA",
+      "language": "ar",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Katar",
+          "Qatar",
+          "قطر",
+          "العنابي",
+          "Al Annabi"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Qatar {opponent} World Cup 2026",
+          "Al Annabi analysis {opponent}"
+        ],
+        "english_name": "Qatar",
+        "world_cup": "كأس العالم 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "AlRayaQA",
+          "name": "Al Raya",
+          "tier": "A",
+          "domains": [
+            "raya.com"
+          ],
+          "sections": [
+            "https://www.raya.com/رياضة"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "AlSharqQA",
+          "name": "Al Sharq",
+          "tier": "A",
+          "domains": [
+            "al-sharq.com"
+          ],
+          "sections": [
+            "https://al-sharq.com/category/رياضة"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "AlJazeeraQA",
+          "name": "Al Jazeera",
+          "tier": "A",
+          "domains": [
+            "aljazeera.net"
+          ],
+          "sections": [
+            "https://www.aljazeera.net/sport/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "AlWatanQA",
+          "name": "Al Watan",
+          "tier": "B",
+          "domains": [
+            "al-watan.com"
+          ],
+          "sections": [],
+          "confidence": "medium",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Katar"
+    },
+    {
+      "country": "Arabia Saudyjska",
+      "iso2": "SA",
+      "language": "ar",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Arabia Saudyjska",
+          "Saudi Arabia",
+          "السعودية",
+          "Green Falcons"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Saudi Arabia {opponent} World Cup 2026",
+          "Green Falcons analysis {opponent}"
+        ],
+        "english_name": "Saudi Arabia",
+        "world_cup": "كأس العالم 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "AlArabiyaSA",
+          "name": "Al Arabiya",
+          "tier": "A",
+          "domains": [
+            "english.alarabiya.net"
+          ],
+          "sections": [
+            "https://english.alarabiya.net/sport"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "OkazSA",
+          "name": "Okaz",
+          "tier": "B",
+          "domains": [
+            "okaz.com.sa"
+          ],
+          "sections": [
+            "https://www.okaz.com.sa/sport"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Arabia Saudyjska"
+    },
+    {
+      "country": "Korea Poludniowa",
+      "iso2": "KR",
+      "language": "ko",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Korea Poludniowa",
+          "South Korea",
+          "Korea Republic",
+          "Taegeuk Warriors",
+          "대한민국"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "South Korea {opponent} World Cup 2026",
+          "Korea Republic analysis {opponent}",
+          "한국 {opponent} 월드컵 경기 반응"
+        ],
+        "english_name": "South Korea",
+        "world_cup": "월드컵 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "YonhapKR",
+          "name": "Yonhap News",
+          "tier": "A",
+          "domains": [
+            "en.yna.co.kr"
+          ],
+          "sections": [
+            "https://en.yna.co.kr/sports/index"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        },
+        {
+          "provider_id": "ChosunKR",
+          "name": "Chosun Ilbo Sports",
+          "tier": "B",
+          "domains": [
+            "sportschosun.com"
+          ],
+          "sections": [
+            "https://www.sportschosun.com/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        }
+      ],
+      "display_name": "Korea Południowa"
+    },
+    {
+      "country": "Uzbekistan",
+      "iso2": "UZ",
+      "language": "uz",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Uzbekistan",
+          "White Wolves",
+          "Ozbekiston"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Uzbekistan {opponent} World Cup 2026",
+          "Ozbekiston milliy jamoa {opponent}"
+        ],
+        "english_name": "Uzbekistan",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "KunUz",
+          "name": "Kun.uz",
+          "tier": "A",
+          "domains": [
+            "kun.uz"
+          ],
+          "sections": [
+            "https://kun.uz/en/news/category/sport-en"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "ZaminUz",
+          "name": "Zamin.uz",
+          "tier": "B",
+          "domains": [
+            "zamin.uz"
+          ],
+          "sections": [
+            "https://zamin.uz/en/sport/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Uzbekistan"
+    },
+    {
+      "country": "Irak",
+      "iso2": "IQ",
+      "language": "ar",
+      "confederation": "AFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Irak",
+          "Iraq",
+          "العراق",
+          "Lions of Mesopotamia"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Iraq {opponent} World Cup 2026",
+          "Lions of Mesopotamia analysis {opponent}"
+        ],
+        "english_name": "Iraq",
+        "world_cup": "كأس العالم 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "IMNIQ",
+          "name": "Iraqi Media Network",
+          "tier": "A",
+          "domains": [
+            "imn.iq"
+          ],
+          "sections": [
+            "https://imn.iq/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "ShafaqNewsIQ",
+          "name": "Shafaq News",
+          "tier": "B",
+          "domains": [
+            "shafaq.com"
+          ],
+          "sections": [
+            "https://shafaq.com/en/Sport"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Irak"
+    },
+    {
+      "country": "Argentyna",
+      "iso2": "AR",
+      "language": "es",
+      "confederation": "CONMEBOL",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Argentyna",
+          "Argentina",
+          "Albiceleste",
+          "Seleccion Argentina"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "cronica {team} {opponent}",
+          "analisis {team} Mundial 2026"
+        ],
+        "english_name": "Argentina",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "OleAR",
+          "name": "Ole",
+          "tier": "A",
+          "domains": [
+            "ole.com.ar"
+          ],
+          "sections": [
+            "https://www.ole.com.ar/seleccion"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-07-13"
+        },
+        {
+          "provider_id": "InfobaeAR",
+          "name": "Infobae",
+          "tier": "A",
+          "domains": [
+            "infobae.com"
+          ],
+          "sections": [
+            "https://www.infobae.com/deportes/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-07-13"
+        },
+        {
+          "provider_id": "ClarinAR",
+          "name": "Clarin",
+          "tier": "A",
+          "domains": [
+            "clarin.com"
+          ],
+          "sections": [
+            "https://www.clarin.com/deportes/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-07-13"
+        },
+        {
+          "provider_id": "LaNacionAR",
+          "name": "La Nacion",
+          "tier": "A",
+          "domains": [
+            "lanacion.com.ar"
+          ],
+          "sections": [
+            "https://www.lanacion.com.ar/deportes/futbol/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-07-13"
+        },
+        {
+          "provider_id": "TycSportsAR",
+          "name": "TyC Sports",
+          "tier": "A",
+          "domains": [
+            "tycsports.com"
+          ],
+          "sections": [],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Argentyna"
+    },
+    {
+      "country": "Brazylia",
+      "iso2": "BR",
+      "language": "pt",
+      "confederation": "CONMEBOL",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Brazylia",
+          "Brasil",
+          "Selecao",
+          "Canarinho",
+          "Brazil"
+        ],
+        "query_templates": [
+          "{team} repercussao imprensa {opponent}",
+          "analise {team} {opponent}",
+          "{team} Copa do Mundo 2026"
+        ],
+        "english_name": "Brazil",
+        "world_cup": "Copa do Mundo 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "GloboEsporteBR",
+          "name": "Globo Esporte (ge)",
+          "tier": "A",
+          "domains": [
+            "globo.com"
+          ],
+          "sections": [
+            "https://ge.globo.com/futebol/selecao-brasileira/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "UolEsporteBR",
+          "name": "UOL Esporte",
+          "tier": "A",
+          "domains": [
+            "uol.com.br"
+          ],
+          "sections": [
+            "https://www.uol.com.br/esporte/futebol/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Brazylia"
+    },
+    {
+      "country": "Kolumbia",
+      "iso2": "CO",
+      "language": "es",
+      "confederation": "CONMEBOL",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Kolumbia",
+          "Colombia",
+          "Los Cafeteros",
+          "Tricolor"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "cronica {team} {opponent}",
+          "analisis {team} Mundial 2026"
+        ],
+        "english_name": "Colombia",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ElTiempoCO",
+          "name": "El Tiempo",
+          "tier": "A",
+          "domains": [
+            "eltiempo.com"
+          ],
+          "sections": [
+            "https://www.eltiempo.com/deportes/futbol/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "WinSportsCO",
+          "name": "Win Sports",
+          "tier": "A",
+          "domains": [
+            "winsports.co"
+          ],
+          "sections": [
+            "https://www.winsports.co/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Kolumbia"
+    },
+    {
+      "country": "Ekwador",
+      "iso2": "EC",
+      "language": "es",
+      "confederation": "CONMEBOL",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Ekwador",
+          "Ecuador",
+          "La Tri",
+          "Seleccion Ecuador"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "cronica {team} {opponent}",
+          "analisis {team} Mundial 2026"
+        ],
+        "english_name": "Ecuador",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ElUniversoEC",
+          "name": "El Universo",
+          "tier": "A",
+          "domains": [
+            "eluniverso.com"
+          ],
+          "sections": [
+            "https://www.eluniverso.com/deportes/futbol/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "PrimiciasEC",
+          "name": "Primicias",
+          "tier": "B",
+          "domains": [
+            "primicias.ec"
+          ],
+          "sections": [
+            "https://www.primicias.ec/deportes/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Ekwador"
+    },
+    {
+      "country": "Paragwaj",
+      "iso2": "PY",
+      "language": "es",
+      "confederation": "CONMEBOL",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Paragwaj",
+          "Paraguay",
+          "La Albirroja"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "cronica {team} {opponent}",
+          "analisis {team} Mundial 2026"
+        ],
+        "english_name": "Paraguay",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ABCColorPY",
+          "name": "ABC Color",
+          "tier": "A",
+          "domains": [
+            "abc.com.py"
+          ],
+          "sections": [
+            "https://www.abc.com.py/deportes/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "UltimaHoraPY",
+          "name": "Ultima Hora",
+          "tier": "B",
+          "domains": [
+            "ultimahora.com"
+          ],
+          "sections": [
+            "https://www.ultimahora.com/deportes"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Paragwaj"
+    },
+    {
+      "country": "Urugwaj",
+      "iso2": "UY",
+      "language": "es",
+      "confederation": "CONMEBOL",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Urugwaj",
+          "Uruguay",
+          "La Celeste"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "cronica {team} {opponent}",
+          "analisis {team} Mundial 2026"
+        ],
+        "english_name": "Uruguay",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ElPaisUY",
+          "name": "El Pais Uruguay",
+          "tier": "A",
+          "domains": [
+            "elpais.com.uy"
+          ],
+          "sections": [
+            "https://www.elpais.com.uy/ovacion/futbol"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        },
+        {
+          "provider_id": "ReferiUY",
+          "name": "Referi",
+          "tier": "B",
+          "domains": [
+            "referi.uy"
+          ],
+          "sections": [
+            "https://www.referi.uy/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Urugwaj"
+    },
+    {
+      "country": "Nowa Zelandia",
+      "iso2": "NZ",
+      "language": "en",
+      "confederation": "OFC",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Nowa Zelandia",
+          "New Zealand",
+          "All Whites"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "All Whites {opponent} World Cup 2026",
+          "{team} player ratings {opponent}"
+        ],
+        "english_name": "New Zealand",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "NZHeraldNZ",
+          "name": "NZ Herald",
+          "tier": "A",
+          "domains": [
+            "nzherald.co.nz"
+          ],
+          "sections": [
+            "https://www.nzherald.co.nz/sport/football/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "StuffNZ",
+          "name": "Stuff",
+          "tier": "B",
+          "domains": [
+            "stuff.co.nz"
+          ],
+          "sections": [
+            "https://www.stuff.co.nz/sport/football"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Nowa Zelandia"
+    },
+    {
+      "country": "Austria",
+      "iso2": "AT",
+      "language": "de",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Austria",
+          "Osterreich",
+          "Das Team"
+        ],
+        "query_templates": [
+          "{team} Pressestimmen {opponent}",
+          "Osterreich {opponent} WM 2026",
+          "{team} Analyse {opponent}"
+        ],
+        "english_name": "Austria",
+        "world_cup": "WM 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "KickerAT",
+          "name": "kicker Austria",
+          "tier": "A",
+          "domains": [
+            "kicker.at"
+          ],
+          "sections": [
+            "https://www.kicker.at/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "KroneSportAT",
+          "name": "Krone Sport",
+          "tier": "B",
+          "domains": [
+            "krone.at"
+          ],
+          "sections": [
+            "https://www.krone.at/sport"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        }
+      ],
+      "display_name": "Austria"
+    },
+    {
+      "country": "Belgia",
+      "iso2": "BE",
+      "language": "nl",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Belgia",
+          "Belgium",
+          "Rode Duivels",
+          "Diables Rouges"
+        ],
+        "query_templates": [
+          "{team} reactie pers {opponent}",
+          "Belgique {opponent} Coupe du monde 2026",
+          "{team} analyse {opponent}"
+        ],
+        "english_name": "Belgium",
+        "world_cup": "WK 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "SporzaBE",
+          "name": "Sporza",
+          "tier": "A",
+          "domains": [
+            "sporza.be"
+          ],
+          "sections": [
+            "https://sporza.be/nl/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "RTBFSportBE",
+          "name": "RTBF Sport",
+          "tier": "A",
+          "language": "fr",
+          "domains": [
+            "rtbf.be"
+          ],
+          "sections": [
+            "https://www.rtbf.be/sport/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Belgia"
+    },
+    {
+      "country": "Bosnia i Hercegowina",
+      "iso2": "BA",
+      "language": "bs",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Bosnia i Hercegowina",
+          "Bosna i Hercegovina",
+          "Zmajevi",
+          "BiH",
+          "Bosnia and Herzegovina",
+          "Bosnie-Herzegovine",
+          "Bosnie"
+        ],
+        "query_templates": [
+          "{team} reakcija medija {opponent}",
+          "BiH {opponent} Svjetsko prvenstvo 2026",
+          "analiza {team} {opponent}"
+        ],
+        "english_name": "Bosnia and Herzegovina",
+        "world_cup": "Svjetsko prvenstvo 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "KlixBA",
+          "name": "Klix.ba",
+          "tier": "A",
+          "domains": [
+            "klix.ba"
+          ],
+          "sections": [
+            "https://www.klix.ba/sport/nogomet"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        },
+        {
+          "provider_id": "OslobodjenjeBA",
+          "name": "Oslobodjenje",
+          "tier": "B",
+          "domains": [
+            "oslobodjenje.ba"
+          ],
+          "sections": [
+            "https://www.oslobodjenje.ba/sport"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-11"
+        }
+      ],
+      "display_name": "Bośnia i Hercegowina"
+    },
+    {
+      "country": "Chorwacja",
+      "iso2": "HR",
+      "language": "hr",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Chorwacja",
+          "Croatia",
+          "Vatreni"
+        ],
+        "query_templates": [
+          "{team} reakcija medija {opponent}",
+          "Hrvatska {opponent} SP 2026",
+          "analiza {team} {opponent}"
+        ],
+        "english_name": "Croatia",
+        "world_cup": "SP 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "SportskeNovostiHR",
+          "name": "Sportske Novosti",
+          "tier": "A",
+          "domains": [
+            "jutarnji.hr"
+          ],
+          "sections": [
+            "https://www.jutarnji.hr/sportske"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        },
+        {
+          "provider_id": "IndexSportHR",
+          "name": "Index Sport",
+          "tier": "B",
+          "domains": [
+            "index.hr"
+          ],
+          "sections": [
+            "https://www.index.hr/sport"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Chorwacja"
+    },
+    {
+      "country": "Czechy",
+      "iso2": "CZ",
+      "language": "cs",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Czechy",
+          "Czechia",
+          "Cesko",
+          "Czech Republic"
+        ],
+        "query_templates": [
+          "{team} reakce medii {opponent}",
+          "Cesko {opponent} MS 2026",
+          "analyza {team} {opponent}"
+        ],
+        "english_name": "Czechia",
+        "world_cup": "MS 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "iSportCZ",
+          "name": "iSport",
+          "tier": "A",
+          "domains": [
+            "isport.blesk.cz"
+          ],
+          "sections": [
+            "https://isport.blesk.cz/fotbal"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "IdnesSportCZ",
+          "name": "iDNES Sport",
+          "tier": "B",
+          "domains": [
+            "sport.idnes.cz"
+          ],
+          "sections": [
+            "https://sport.idnes.cz/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Czechy"
+    },
+    {
+      "country": "Anglia",
+      "iso2": "GB-ENG",
+      "language": "en",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Anglia",
+          "England",
+          "Three Lions"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "England {opponent} World Cup 2026",
+          "{team} player ratings {opponent}"
+        ],
+        "english_name": "England",
+        "world_cup": "World Cup 2026",
+        "exonyms": {
+          "es": "Inglaterra",
+          "pt": "Inglaterra",
+          "fr": "Angleterre",
+          "de": "England"
+        }
+      },
+      "outlets": [
+        {
+          "provider_id": "BBCSportUK",
+          "name": "BBC Sport",
+          "tier": "A",
+          "domains": [
+            "bbc.com",
+            "bbc.co.uk"
+          ],
+          "sections": [
+            "https://www.bbc.com/sport/football"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "GuardianUK",
+          "name": "The Guardian",
+          "tier": "A",
+          "domains": [
+            "theguardian.com"
+          ],
+          "sections": [
+            "https://www.theguardian.com/football/england"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Anglia"
+    },
+    {
+      "country": "Francja",
+      "iso2": "FR",
+      "language": "fr",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Francja",
+          "France",
+          "Les Bleus",
+          "Equipe de France"
+        ],
+        "query_templates": [
+          "{team} reactions presse {opponent}",
+          "analyse {team} {opponent}",
+          "{team} Coupe du monde 2026"
+        ],
+        "english_name": "France",
+        "world_cup": "Coupe du monde 2026",
+        "exonyms": {
+          "es": "Francia",
+          "pt": "Franca",
+          "en": "France"
+        }
+      },
+      "outlets": [
+        {
+          "provider_id": "LEquipeFR",
+          "name": "L'Equipe",
+          "tier": "A",
+          "domains": [
+            "lequipe.fr"
+          ],
+          "sections": [
+            "https://www.lequipe.fr/Football/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "LeParisienFR",
+          "name": "Le Parisien",
+          "tier": "B",
+          "domains": [
+            "leparisien.fr"
+          ],
+          "sections": [
+            "https://www.leparisien.fr/sports/football/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Francja"
+    },
+    {
+      "country": "Niemcy",
+      "iso2": "DE",
+      "language": "de",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Niemcy",
+          "Deutschland",
+          "DFB-Team",
+          "Die Mannschaft",
+          "Germany"
+        ],
+        "query_templates": [
+          "{team} Pressestimmen {opponent}",
+          "{team} Analyse {opponent}",
+          "Deutschland {opponent} WM 2026"
+        ],
+        "english_name": "Germany",
+        "world_cup": "WM 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "SportschauDE",
+          "name": "Sportschau",
+          "tier": "A",
+          "domains": [
+            "sportschau.de"
+          ],
+          "sections": [
+            "https://www.sportschau.de/fussball/fifa-wm-2026/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-30"
+        },
+        {
+          "provider_id": "KickerDE",
+          "name": "kicker",
+          "tier": "A",
+          "domains": [
+            "kicker.de"
+          ],
+          "sections": [
+            "https://www.kicker.de/nationalmannschaft/startseite"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "BildDE",
+          "name": "Bild",
+          "tier": "B",
+          "domains": [
+            "bild.de"
+          ],
+          "sections": [
+            "https://sportbild.bild.de/"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-14"
+        }
+      ],
+      "display_name": "Niemcy"
+    },
+    {
+      "country": "Holandia",
+      "iso2": "NL",
+      "language": "nl",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Holandia",
+          "Netherlands",
+          "Oranje",
+          "Nederland",
+          "Pays Bas",
+          "Hollande"
+        ],
+        "query_templates": [
+          "{team} reactie pers {opponent}",
+          "Oranje {opponent} WK 2026",
+          "{team} analyse {opponent}"
+        ],
+        "english_name": "Netherlands",
+        "world_cup": "WK 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "NOSSportNL",
+          "name": "NOS Sport",
+          "tier": "A",
+          "domains": [
+            "nos.nl"
+          ],
+          "sections": [
+            "https://nos.nl/sport/voetbal"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "ADVoetbalNL",
+          "name": "AD Voetbal",
+          "tier": "B",
+          "domains": [
+            "ad.nl"
+          ],
+          "sections": [
+            "https://www.ad.nl/voetbal/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Holandia"
+    },
+    {
+      "country": "Norwegia",
+      "iso2": "NO",
+      "language": "no",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Norwegia",
+          "Norge",
+          "Landslaget",
+          "Norway"
+        ],
+        "query_templates": [
+          "Norge {opponent} VM 2026",
+          "{team} reaksjon presse {opponent}",
+          "{team} analyse {opponent}"
+        ],
+        "english_name": "Norway",
+        "world_cup": "VM 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "VGSportNO",
+          "name": "VG Sport",
+          "tier": "A",
+          "domains": [
+            "vg.no"
+          ],
+          "sections": [
+            "https://www.vg.no/sport/fotball"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "NRKSportNO",
+          "name": "NRK Sport",
+          "tier": "A",
+          "domains": [
+            "nrk.no"
+          ],
+          "sections": [
+            "https://www.nrk.no/fotballvm2026/",
+            "https://www.nrk.no/sport/fotball/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Norwegia"
+    },
+    {
+      "country": "Portugalia",
+      "iso2": "PT",
+      "language": "pt",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Portugalia",
+          "Portugal",
+          "Selecao das Quinas"
+        ],
+        "query_templates": [
+          "{team} repercussao imprensa {opponent}",
+          "analise {team} {opponent}",
+          "{team} Mundial 2026"
+        ],
+        "english_name": "Portugal",
+        "world_cup": "Mundial 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "ABolaPT",
+          "name": "A Bola",
+          "tier": "A",
+          "domains": [
+            "abola.pt"
+          ],
+          "sections": [
+            "https://www.abola.pt/futebol/portugal-1651",
+            "https://www.abola.pt/futebol/competicao/mundial-30"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-28"
+        },
+        {
+          "provider_id": "OJogoPT",
+          "name": "O Jogo",
+          "tier": "A",
+          "domains": [
+            "ojogo.pt"
+          ],
+          "sections": [
+            "https://www.ojogo.pt/topico/selecao-nacional"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-28"
+        },
+        {
+          "provider_id": "RecordPT",
+          "name": "Record",
+          "tier": "A",
+          "domains": [
+            "record.pt"
+          ],
+          "sections": [
+            "https://www.record.pt/internacional/competicoes-de-selecoes/mundial/mundial-2026/portugal"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        }
+      ],
+      "display_name": "Portugalia"
+    },
+    {
+      "country": "Szkocja",
+      "iso2": "GB-SCT",
+      "language": "en",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Szkocja",
+          "Scotland",
+          "Tartan Army"
+        ],
+        "query_templates": [
+          "{team} reaction press {opponent}",
+          "Scotland {opponent} World Cup 2026",
+          "{team} player ratings {opponent}"
+        ],
+        "english_name": "Scotland",
+        "world_cup": "World Cup 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "BBCSportScotland",
+          "name": "BBC Sport Scotland",
+          "tier": "A",
+          "domains": [
+            "bbc.co.uk",
+            "bbc.com"
+          ],
+          "sections": [
+            "https://www.bbc.co.uk/sport/football/teams/scotland"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-18"
+        },
+        {
+          "provider_id": "DailyRecordSC",
+          "name": "Daily Record",
+          "tier": "B",
+          "domains": [
+            "dailyrecord.co.uk"
+          ],
+          "sections": [
+            "https://www.dailyrecord.co.uk/sport/football/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Szkocja"
+    },
+    {
+      "country": "Hiszpania",
+      "iso2": "ES",
+      "language": "es",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Hiszpania",
+          "Espana",
+          "La Roja",
+          "Seleccion Espanola",
+          "Spain"
+        ],
+        "query_templates": [
+          "{team} reaccion prensa {opponent}",
+          "cronica {team} {opponent}",
+          "analisis {team} Mundial 2026"
+        ],
+        "english_name": "Spain",
+        "world_cup": "Mundial 2026",
+        "exonyms": {
+          "es": "Espana",
+          "fr": "Espagne",
+          "en": "Spain"
+        }
+      },
+      "outlets": [
+        {
+          "provider_id": "MarcaES",
+          "name": "Marca",
+          "tier": "A",
+          "domains": [
+            "marca.com"
+          ],
+          "sections": [
+            "https://www.marca.com/futbol/seleccion.html"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "DiarioAsES",
+          "name": "Diario AS",
+          "tier": "A",
+          "domains": [
+            "as.com"
+          ],
+          "sections": [
+            "https://as.com/futbol/seleccion/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Hiszpania"
+    },
+    {
+      "country": "Szwecja",
+      "iso2": "SE",
+      "language": "sv",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Szwecja",
+          "Sweden",
+          "Blagult"
+        ],
+        "query_templates": [
+          "{team} reaktion press {opponent}",
+          "Sverige {opponent} VM 2026",
+          "{team} analys {opponent}"
+        ],
+        "english_name": "Sweden",
+        "world_cup": "VM 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "AftonbladetSE",
+          "name": "Aftonbladet Sport",
+          "tier": "A",
+          "domains": [
+            "aftonbladet.se"
+          ],
+          "sections": [
+            "https://www.aftonbladet.se/sportbladet/fotboll"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "ExpressenSE",
+          "name": "Expressen Sport",
+          "tier": "B",
+          "domains": [
+            "expressen.se"
+          ],
+          "sections": [
+            "https://www.expressen.se/sport/fotboll/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Szwecja"
+    },
+    {
+      "country": "Szwajcaria",
+      "iso2": "CH",
+      "language": "de",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Szwajcaria",
+          "Switzerland",
+          "Schweiz",
+          "Suisse",
+          "Nati"
+        ],
+        "query_templates": [
+          "{team} Pressestimmen {opponent}",
+          "Schweiz {opponent} WM 2026",
+          "{team} Analyse {opponent}"
+        ],
+        "english_name": "Switzerland",
+        "world_cup": "WM 2026",
+        "exonyms": {
+          "es": "Suiza",
+          "pt": "Suica",
+          "it": "Svizzera"
+        }
+      },
+      "outlets": [
+        {
+          "provider_id": "SRFSportCH",
+          "name": "SRF Sport",
+          "tier": "A",
+          "domains": [
+            "srf.ch"
+          ],
+          "sections": [
+            "https://www.srf.ch/sport/fussball"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-19"
+        },
+        {
+          "provider_id": "ZwanzigMinCH",
+          "name": "20 Minuten",
+          "tier": "B",
+          "domains": [
+            "20min.ch"
+          ],
+          "sections": [
+            "https://www.20min.ch/sport"
+          ],
+          "confidence": "high",
+          "verified_at": "2026-06-19"
+        },
+        {
+          "provider_id": "RTSSportCH",
+          "name": "RTS Sport",
+          "tier": "A",
+          "language": "fr",
+          "domains": [
+            "rts.ch"
+          ],
+          "sections": [
+            "https://www.rts.ch/sport/football/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "BlickCH",
+          "name": "Blick Sport",
+          "tier": "A",
+          "domains": [
+            "blick.ch"
+          ],
+          "sections": [
+            "https://www.blick.ch/sport/fussball/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Szwajcaria"
+    },
+    {
+      "country": "Turcja",
+      "iso2": "TR",
+      "language": "tr",
+      "confederation": "UEFA",
+      "role": "qualified",
+      "search_hints": {
+        "team_names": [
+          "Turcja",
+          "Turkiye",
+          "Turkey",
+          "A Milli Takim"
+        ],
+        "query_templates": [
+          "{team} basin tepkisi {opponent}",
+          "Turkiye {opponent} Dunya Kupasi 2026",
+          "{team} analiz {opponent}"
+        ],
+        "english_name": "Turkey",
+        "world_cup": "Dunya Kupasi 2026"
+      },
+      "outlets": [
+        {
+          "provider_id": "FanatikTR",
+          "name": "Fanatik",
+          "tier": "A",
+          "domains": [
+            "fanatik.com.tr"
+          ],
+          "sections": [
+            "https://www.fanatik.com.tr/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        },
+        {
+          "provider_id": "TRTSporTR",
+          "name": "TRT Spor",
+          "tier": "A",
+          "domains": [
+            "trtspor.com.tr"
+          ],
+          "sections": [
+            "https://www.trtspor.com.tr/"
+          ],
+          "confidence": "high",
+          "verified_at": null
+        }
+      ],
+      "display_name": "Turcja"
+    }
+  ]
+}

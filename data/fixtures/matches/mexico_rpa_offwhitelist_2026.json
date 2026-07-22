@@ -1,0 +1,60 @@
+{
+  "match_id": "mexico_rpa_offwhitelist_2026",
+  "aliases": [
+    "Meksyk - RPA zrodlo spoza whitelisty",
+    "Meksyk RPA spoza whitelisty"
+  ],
+  "competition": "Mistrzostwa Swiata 2026",
+  "stage": "faza grupowa",
+  "date": "2026-06-11",
+  "venue": "Estadio Azteca, Mexico City",
+  "teams": { "home": "Meksyk", "away": "RPA" },
+  "score": { "full_time": "1-1", "after_extra_time": null, "penalties": null, "winner": null },
+  "fact_source_ids": ["e_ms_result"],
+  "goals": [],
+  "key_events": [],
+  "evidence": [
+    {
+      "id": "e_ms_result",
+      "claim": "Mecz zakonczyl sie remisem 1-1.",
+      "value": "1-1",
+      "source_url": "fixture://mexico_rpa_offwhitelist_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-11T22:00:00+02:00",
+      "confidence": "high"
+    }
+  ],
+  "media": [
+    {
+      "country": "Meksyk",
+      "outlet": "ElUniversalMX",
+      "language": "es",
+      "url": "https://www.eluniversal.com.mx/deportes/mexico-sudafrica/",
+      "evidence_id": "e_mx_universal",
+      "retrieved_at": "2026-06-11T23:05:00+02:00",
+      "original_text": "El Tri deja escapar dos puntos en casa y arranca el Mundial con mas dudas que certezas.",
+      "translation_pl": "Tri traci dwa punkty u siebie i zaczyna mundial z wiekszymi watpliwosciami niz pewnoscia."
+    },
+    {
+      "country": "Meksyk",
+      "outlet": "RecordMX",
+      "language": "es",
+      "url": "https://www.record.com.mx/futbol-mundial/mexico-sudafrica",
+      "evidence_id": "e_mx_record",
+      "retrieved_at": "2026-06-11T23:10:00+02:00",
+      "original_text": "Decepcion en el arranque: Mexico volvio a quedar a deber ante una seleccion ordenada.",
+      "translation_pl": "Rozczarowanie na otwarcie: Meksyk znowu zostawil niedosyt w starciu z uporzadkowana reprezentacja."
+    },
+    {
+      "country": "RPA",
+      "outlet": "News24ZA",
+      "language": "en",
+      "url": "https://randomblog.example/bafana-opinion",
+      "evidence_id": "e_za_offwhitelist",
+      "retrieved_at": "2026-06-11T23:08:00+02:00",
+      "original_text": "Bafana fans react online to a hard-fought draw against Mexico.",
+      "translation_pl": "Kibice Bafany komentuja w sieci wywalczony remis z Meksykiem."
+    }
+  ]
+}

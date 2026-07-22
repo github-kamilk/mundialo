@@ -1,0 +1,84 @@
+﻿{% extends "base.html" %}
+
+{% block style %}
+.sources-title {
+  font-size: 84px;
+  margin-top: 48px;
+}
+.sources-sub {
+  margin-top: 18px;
+  font-size: 30px;
+  color: var(--muted);
+}
+
+.source-list {
+  flex: 1;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+}
+.source-row {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding: 38px 0;
+  border-bottom: 1px solid var(--line);
+}
+.source-row:first-child { border-top: 1px solid var(--line); }
+.source-row .flag, .source-row .flag-fallback { width: 78px; height: 52px; }
+.source-row .flag { object-fit: cover; }
+.source-row .flag-fallback { font-size: 24px; }
+
+.source-meta { flex: 1; min-width: 0; }
+.source-outlet { font-size: 44px; font-weight: 600; }
+.source-domain { margin-top: 8px; font-size: 28px; color: var(--muted); }
+
+.source-tier {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 22px;
+  white-space: nowrap;
+}
+
+.sources-note {
+  margin: 40px 0 36px;
+  font-size: 28px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+{% endblock %}
+
+{% block content %}
+<div class="slide">
+  <div><span class="eyebrow">Sk&aogon;d to wiemy</span></div>
+
+  <h1 class="sources-title display">&Zacute;r&oacute;d&lstrok;a</h1>
+  {% if spec.date %}<div class="sources-sub">Relacje prasowe po meczu z {{ spec.date }}</div>{% endif %}
+
+  <div class="source-list">
+    {% for item in spec["items"] %}
+    <div class="source-row">
+      {% if item.iso2 | flag %}<img class="flag" src="{{ item.iso2 | flag }}" alt="">{% else %}<span class="flag-fallback">{{ item.iso2 | upper }}</span>{% endif %}
+      <div class="source-meta">
+        <div class="source-outlet">{{ item.outlet }}</div>
+        <div class="source-domain">{{ item.domain }}</div>
+      </div>
+      {# tier zrodla to informacja wewnetrzna redakcji - nie pokazujemy na grafice #}
+    </div>
+    {% endfor %}
+  </div>
+
+  <p class="sources-note">Pe&lstrok;ne linki w opisie posta. T&lstrok;umaczenia w&lstrok;asne redakcji &mdash; orygina&lstrok;y cytat&oacute;w w archiwum.</p>
+
+  <div class="footer">
+    <div class="brand"><span>@</span>mundaily_</div>
+    <div>{{ spec.slide_number }}/{{ spec.total }}</div>
+  </div>
+</div>
+{% endblock %}

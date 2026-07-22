@@ -1,0 +1,21 @@
+{
+  "id": "media_mexico_rpa_happy",
+  "post_type": "media_reaction",
+  "match_query": "Meksyk - RPA mecz otwarcia mundialu 2026",
+  "expected_status": "ready",
+  "must_have_checks": [
+    "all_claims_have_evidence",
+    "no_source_conflicts",
+    "original_retained_in_evidence",
+    "both_countries_present",
+    "every_quote_has_outlet_and_url",
+    "quote_within_fair_use_length",
+    "mood_requires_two_sources",
+    "title_slide_present",
+    "sources_slide_present",
+    "no_banned_phrases"
+  ],
+  "must_fail_checks": [],
+  "expected_blocking": [],
+  "forbidden_terms_in_copy": ["caly kraj", "wszyscy Meksykanie"]
+}

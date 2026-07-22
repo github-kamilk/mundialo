@@ -1,0 +1,196 @@
+{
+  "match_id": "conflicting_sources_match",
+  "aliases": [
+    "PSG - Arsenal konflikt zrodel",
+    "Paris Saint-Germain - Arsenal conflicting sources test"
+  ],
+  "competition": "UEFA Champions League",
+  "stage": "final",
+  "date": "2026-05-30",
+  "venue": "Puskas Arena, Budapest",
+  "teams": {
+    "home": "Paris Saint-Germain",
+    "away": "Arsenal"
+  },
+  "score": {
+    "full_time": "1-1",
+    "after_extra_time": "1-1",
+    "penalties": "4-3",
+    "winner": "Paris Saint-Germain"
+  },
+  "fact_source_ids": [
+    "e_match_result",
+    "e_penalties",
+    "e_havertz_goal",
+    "e_dembele_goal"
+  ],
+  "goals": [
+    {
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "minute": 6,
+      "detail": "goal",
+      "evidence_id": "e_havertz_goal"
+    },
+    {
+      "team": "Paris Saint-Germain",
+      "player": "Ousmane Dembele",
+      "minute": 64,
+      "detail": "penalty",
+      "evidence_id": "e_dembele_goal"
+    }
+  ],
+  "key_events": [],
+  "evidence": [
+    {
+      "id": "e_match_result",
+      "claim": "Final zakonczyl sie remisem 1-1 po dogrywce.",
+      "value": "1-1 after extra time",
+      "source_url": "fixture://conflicting_sources_match/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_penalties",
+      "claim": "Paris Saint-Germain wygral serie rzutow karnych 4-3.",
+      "value": "PSG 4-3 Arsenal on penalties",
+      "source_url": "fixture://conflicting_sources_match/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_havertz_goal",
+      "claim": "Kai Havertz strzelil gola dla Arsenalu w 6. minucie.",
+      "value": "Kai Havertz 6'",
+      "source_url": "fixture://conflicting_sources_match/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_dembele_goal",
+      "claim": "Ousmane Dembele wyrownal dla PSG z rzutu karnego w 64. minucie.",
+      "value": "Ousmane Dembele 64' penalty",
+      "source_url": "fixture://conflicting_sources_match/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_possession",
+      "claim": "Paris Saint-Germain mial 61% posiadania pilki, a Arsenal 39%.",
+      "value": {
+        "Paris Saint-Germain": 61,
+        "Arsenal": 39
+      },
+      "source_url": "fixture://conflicting_sources_match/provider_a",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_possession",
+      "claim": "Drugi provider podaje inny podzial posiadania (58% / 42%).",
+      "value": {
+        "Paris Saint-Germain": 58,
+        "Arsenal": 42
+      },
+      "source_url": "fixture://conflicting_sources_match/provider_b",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_shots",
+      "claim": "Paris Saint-Germain oddal 17 strzalow, a Arsenal 8.",
+      "value": {
+        "Paris Saint-Germain": 17,
+        "Arsenal": 8
+      },
+      "source_url": "fixture://conflicting_sources_match/provider_a",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_shots_on_target",
+      "claim": "Paris Saint-Germain oddal 6 strzalow celnych, a Arsenal 3.",
+      "value": {
+        "Paris Saint-Germain": 6,
+        "Arsenal": 3
+      },
+      "source_url": "fixture://conflicting_sources_match/provider_a",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    }
+  ],
+  "metrics": {
+    "provider": "OfflineMetricFixture",
+    "retrieved_at": "2026-06-10T00:00:00+02:00",
+    "source_ids": [
+      "e_possession",
+      "e_shots",
+      "e_shots_on_target"
+    ],
+    "metric_warnings": [
+      "xG unavailable in this fixture, do not use xG-based angles.",
+      "PPDA unavailable in this fixture, do not use pressing-based angles.",
+      "possession differs between providers, flagged as conflict"
+    ],
+    "team_metrics": {
+      "Paris Saint-Germain": {
+        "possession": {
+          "label": "posiadanie pilki",
+          "value": 61,
+          "unit": "%",
+          "evidence_id": "e_possession"
+        },
+        "shots": {
+          "label": "strzaly",
+          "value": 17,
+          "unit": "",
+          "evidence_id": "e_shots"
+        },
+        "shots_on_target": {
+          "label": "strzaly celne",
+          "value": 6,
+          "unit": "",
+          "evidence_id": "e_shots_on_target"
+        }
+      },
+      "Arsenal": {
+        "possession": {
+          "label": "posiadanie pilki",
+          "value": 39,
+          "unit": "%",
+          "evidence_id": "e_possession"
+        },
+        "shots": {
+          "label": "strzaly",
+          "value": 8,
+          "unit": "",
+          "evidence_id": "e_shots"
+        },
+        "shots_on_target": {
+          "label": "strzaly celne",
+          "value": 3,
+          "unit": "",
+          "evidence_id": "e_shots_on_target"
+        }
+      }
+    },
+    "player_metrics": []
+  },
+  "narratives": []
+}

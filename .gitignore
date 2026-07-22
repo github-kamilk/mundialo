@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Artefakty runow (run.json, slajdy, cache wyszukiwan, outlet health) - archiwum
+# operacyjne zostaje na dysku, nie w gicie. Wyselekcjonowane demo: docs/demo/.
+runs/
+
+# Worktrees agenta
+.claude/worktrees/
+
+# Artefakty lokalne
+test_out.txt
+pytest_out.txt

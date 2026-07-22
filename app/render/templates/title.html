@@ -1,0 +1,100 @@
+﻿{% extends "base.html" %}
+
+{% block style %}
+.title-slide { justify-content: space-between; }
+
+.score-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  margin: 30px 0 10px;
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  width: 290px;
+}
+.team .flag, .team .flag-fallback { width: 168px; height: 112px; }
+.team .flag { object-fit: cover; }
+.team .flag-fallback { font-size: 40px; }
+.team .name {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.score {
+  font-family: "Archivo", "Inter", sans-serif;
+  font-size: 150px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.date-chip {
+  align-self: center;
+  font-size: 27px;
+  color: var(--muted);
+  letter-spacing: 0.22em;
+}
+
+.question {
+  font-size: 88px;
+  line-height: 1.12;
+  text-align: center;
+  margin: 36px 0 26px;
+}
+.question .q-accent { color: var(--gold); }
+
+.title-source {
+  font-size: 30px;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: -6px 0 22px;
+}
+
+.subline {
+  font-size: 33px;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: center;
+}
+
+.swipe { color: var(--gold); font-weight: 600; }
+{% endblock %}
+
+{% block content %}
+<div class="slide title-slide">
+  <div style="text-align:center;"><span class="eyebrow">Reakcje medi&oacute;w &bull; Mundial 2026</span></div>
+
+  <div>
+    <div class="score-block">
+      <div class="team">
+        {% if spec.home_iso2 | flag %}<img class="flag" src="{{ spec.home_iso2 | flag }}" alt="">{% else %}<span class="flag-fallback">{{ spec.home_iso2 | upper }}</span>{% endif %}
+        <div class="name">{{ spec.home_team }}</div>
+      </div>
+      <div class="score display">{{ spec.score }}</div>
+      <div class="team">
+        {% if spec.away_iso2 | flag %}<img class="flag" src="{{ spec.away_iso2 | flag }}" alt="">{% else %}<span class="flag-fallback">{{ spec.away_iso2 | upper }}</span>{% endif %}
+        <div class="name">{{ spec.away_team }}</div>
+      </div>
+    </div>
+    {% if spec.date %}<div style="text-align:center;" class="date-chip">{{ spec.date }}{% if spec.host_city %} &bull; {{ spec.host_city }}{% endif %}</div>{% endif %}
+  </div>
+
+  <div>
+    <h1 class="question display">{{ spec.question }}</h1>
+    {% if spec.attribution %}<div class="title-source">{{ spec.attribution }}</div>{% endif %}
+    <p class="subline">{{ spec.body }}</p>
+  </div>
+
+  <div class="footer">
+    <div class="brand"><span>@</span>mundaily_</div>
+    <div class="swipe">przesu&nacute; &rarr;</div>
+  </div>
+</div>
+{% endblock %}

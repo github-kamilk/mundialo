@@ -1,0 +1,125 @@
+{
+  "_instrukcja": [
+    "SZABLON nowego meczu (tor media_reaction). Skopiuj ten plik do <match_id>.json (bez '_').",
+    "Pliki z prefiksem '_' sa ignorowane przez resolver, wiec ten szablon nie zaklocala wyszukiwania.",
+    "Po wypelnieniu odpal preflight: python scripts/validate_fixture.py <match_id> [--llm].",
+    "REGULY POWIAZAN (lamia run, jesli zle):",
+    "1. match_id musi byc rowny nazwie pliku bez .json.",
+    "2. aliases: frazy, ktorymi rozpoznasz mecz przez --match (resolver liczy pokrycie tokenow, min. 2 wspolne).",
+    "3. evidence[].id: kazdy goals[].evidence_id, key_events[].evidence_id i wpis w fact_source_ids MUSI wskazywac istniejacy evidence[].id.",
+    "4. evidence[] to fakty Tier A: provider == 'OfflineVerifiedFixture', source_tier == 'A' (rejestr to wymusza).",
+    "5. media[].country MUSI byc identyczne jak teams.home / teams.away.",
+    "6. media[].outlet (provider_id) MUSI istniec w data/sources/country_media.json dla tego kraju (zdolnosc MEDIA_REACTION).",
+    "7. media[].url MUSI byc w domenie z whitelisty tego outletu (inaczej cytat jest po cichu odrzucany).",
+    "8. media[].translation_pl: WYMAGANE bez flagi --llm (sciezka deterministyczna). Z --llm model przetlumaczy oryginal.",
+    "9. Daj min. 2 outlety na kraj (mozesz 1, ale 2 daje 'mood' i lepsza karuzele). Max 2 cytaty/kraj ida na slajdy.",
+    "Pola opcjonalne (metrics, narratives) sa potrzebne tylko dla toru data_story - dla media_reaction je pomin."
+  ],
+  "match_id": "ZMIEN_mnie_na_nazwe_pliku",
+  "aliases": [
+    "Kraj A - Kraj B",
+    "Country A - Country B",
+    "Kraj A Kraj B grupa X mundial 2026"
+  ],
+  "competition": "Mistrzostwa Swiata 2026",
+  "stage": "faza grupowa",
+  "date": "2026-06-11",
+  "venue": "Stadion, Miasto",
+  "teams": {
+    "home": "Kraj A",
+    "away": "Kraj B"
+  },
+  "score": {
+    "full_time": "0-0",
+    "after_extra_time": null,
+    "penalties": null,
+    "winner": null
+  },
+  "fact_source_ids": [
+    "e_result"
+  ],
+  "goals": [
+    {
+      "team": "Kraj A",
+      "player": "Imie Nazwisko",
+      "minute": 1,
+      "detail": "goal",
+      "evidence_id": "e_goal_1"
+    }
+  ],
+  "key_events": [
+    {
+      "minute": 1,
+      "event": "Krotki, faktyczny opis wydarzenia.",
+      "evidence_id": "e_goal_1"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e_result",
+      "claim": "Mecz zakonczyl sie wynikiem X-Y.",
+      "value": "X-Y",
+      "source_url": "fixture://ZMIEN_mnie_na_nazwe_pliku/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-11T23:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_goal_1",
+      "claim": "Imie Nazwisko strzelil gola w 1. minucie.",
+      "value": "Imie Nazwisko 1'",
+      "source_url": "fixture://ZMIEN_mnie_na_nazwe_pliku/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-11T23:00:00+02:00",
+      "confidence": "high"
+    }
+  ],
+  "media": [
+    {
+      "country": "Kraj A",
+      "outlet": "ProviderIdZ_country_media.json",
+      "language": "xx",
+      "url": "https://domena-z-whitelisty/sekcja/artykul",
+      "evidence_id": "e_media_a1",
+      "retrieved_at": "2026-06-11T23:05:00+02:00",
+      "confidence": "high",
+      "original_text": "Krotki, wierny cytat w jezyku oryginalu (do ~280 znakow).",
+      "translation_pl": "Tlumaczenie PL (wymagane bez --llm; z --llm zostaw oryginal, model przetlumaczy)."
+    },
+    {
+      "country": "Kraj A",
+      "outlet": "DrugiProviderIdKrajuA",
+      "language": "xx",
+      "url": "https://druga-domena-z-whitelisty/artykul",
+      "evidence_id": "e_media_a2",
+      "retrieved_at": "2026-06-11T23:07:00+02:00",
+      "confidence": "high",
+      "original_text": "Drugi cytat z innego zaufanego outletu kraju A.",
+      "translation_pl": "Tlumaczenie PL drugiego cytatu."
+    },
+    {
+      "country": "Kraj B",
+      "outlet": "ProviderIdKrajuB",
+      "language": "yy",
+      "url": "https://domena-kraju-b-z-whitelisty/artykul",
+      "evidence_id": "e_media_b1",
+      "retrieved_at": "2026-06-11T23:06:00+02:00",
+      "confidence": "high",
+      "original_text": "Krotki cytat prasy kraju B.",
+      "translation_pl": "Tlumaczenie PL cytatu kraju B."
+    },
+    {
+      "country": "Kraj B",
+      "outlet": "DrugiProviderIdKrajuB",
+      "language": "yy",
+      "url": "https://druga-domena-kraju-b/artykul",
+      "evidence_id": "e_media_b2",
+      "retrieved_at": "2026-06-11T23:09:00+02:00",
+      "confidence": "high",
+      "original_text": "Drugi cytat prasy kraju B.",
+      "translation_pl": "Tlumaczenie PL drugiego cytatu kraju B."
+    }
+  ]
+}

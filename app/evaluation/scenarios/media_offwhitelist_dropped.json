@@ -1,0 +1,10 @@
+{
+  "id": "media_offwhitelist_dropped",
+  "post_type": "media_reaction",
+  "match_query": "Meksyk - RPA zrodlo spoza whitelisty",
+  "expected_status": "needs_human_review",
+  "must_have_checks": [],
+  "must_fail_checks": [],
+  "expected_blocking": ["one_country_media_missing"],
+  "forbidden_terms_in_copy": []
+}

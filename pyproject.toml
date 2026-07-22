@@ -1,0 +1,25 @@
+[project]
+name = "mundial-redakcja-ai"
+version = "0.1.0"
+description = "Evidence-first MVP redakcji agentowej do puszek instagramowych po meczach."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+# Rdzen i testy nie wymagaja sieci ani kluczy (FakeModelGateway / Fake search+fetch).
+# Realny adapter modelu wlaczasz przez: pip install '.[llm]'
+llm = ["openai>=1.0"]
+# Realna warstwa research (search+fetch) - tylko gdy uzywasz --research:
+# pip install '.[research]' (potrzebny tez TAVILY_API_KEY).
+research = ["httpx>=0.27", "trafilatura>=1.8"]
+# Warstwa graficzna (render karuzeli PNG): pip install '.[render]'
+# + jednorazowo: python -m playwright install chromium
+# + jednorazowo: python scripts/fetch_render_assets.py (fonty + flagi)
+render = ["jinja2>=3.1", "playwright>=1.45"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.unittest]
+start-dir = "tests"
+

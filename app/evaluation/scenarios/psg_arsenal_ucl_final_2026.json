@@ -1,0 +1,19 @@
+{
+  "id": "psg_arsenal_ucl_final_2026",
+  "match_query": "PSG - Arsenal, final Ligi Mistrzow 2026",
+  "expected_status": "ready",
+  "must_have_checks": [
+    "all_claims_have_evidence",
+    "no_source_conflicts",
+    "single_angle",
+    "hook_first_three_seconds",
+    "carousel_has_5_to_7_slides",
+    "main_number_present",
+    "cta_present",
+    "source_note_present",
+    "no_banned_phrases"
+  ],
+  "must_fail_checks": [],
+  "expected_blocking": [],
+  "forbidden_terms_in_copy": ["xG", "PPDA"]
+}

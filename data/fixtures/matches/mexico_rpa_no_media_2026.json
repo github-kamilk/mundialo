@@ -1,0 +1,29 @@
+{
+  "match_id": "mexico_rpa_no_media_2026",
+  "aliases": [
+    "Meksyk - RPA bez glosow mediow",
+    "Meksyk RPA bez glosow mediow"
+  ],
+  "competition": "Mistrzostwa Swiata 2026",
+  "stage": "faza grupowa",
+  "date": "2026-06-11",
+  "venue": "Estadio Azteca, Mexico City",
+  "teams": { "home": "Meksyk", "away": "RPA" },
+  "score": { "full_time": "1-1", "after_extra_time": null, "penalties": null, "winner": null },
+  "fact_source_ids": ["e_ms_result"],
+  "goals": [],
+  "key_events": [],
+  "evidence": [
+    {
+      "id": "e_ms_result",
+      "claim": "Mecz zakonczyl sie remisem 1-1.",
+      "value": "1-1",
+      "source_url": "fixture://mexico_rpa_no_media_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-11T22:00:00+02:00",
+      "confidence": "high"
+    }
+  ],
+  "media": []
+}

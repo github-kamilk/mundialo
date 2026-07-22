@@ -1,0 +1,9 @@
+{
+  "id": "synthetic_possession_trap",
+  "match_query": "Synthetic FC - Counter FC",
+  "expected_status": "needs_human_review",
+  "must_have_checks": [],
+  "must_fail_checks": [],
+  "expected_blocking": [],
+  "forbidden_terms_in_copy": ["xG"]
+}

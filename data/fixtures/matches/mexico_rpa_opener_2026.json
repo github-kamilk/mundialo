@@ -1,0 +1,135 @@
+{
+  "match_id": "mexico_rpa_opener_2026",
+  "aliases": [
+    "Meksyk - RPA",
+    "Mexico - South Africa",
+    "mecz otwarcia mundialu 2026",
+    "Meksyk RPA grupa A",
+    "Mistrzostwa Swiata 2026 Meksyk RPA"
+  ],
+  "competition": "Mistrzostwa Swiata 2026",
+  "stage": "faza grupowa",
+  "date": "2026-06-11",
+  "venue": "Estadio Azteca, Mexico City",
+  "teams": {
+    "home": "Meksyk",
+    "away": "RPA"
+  },
+  "score": {
+    "full_time": "1-1",
+    "after_extra_time": null,
+    "penalties": null,
+    "winner": null
+  },
+  "fact_source_ids": [
+    "e_ms_result",
+    "e_ms_rsa_goal",
+    "e_ms_mex_goal"
+  ],
+  "goals": [
+    {
+      "team": "RPA",
+      "player": "Lyle Foster",
+      "minute": 23,
+      "detail": "goal",
+      "evidence_id": "e_ms_rsa_goal"
+    },
+    {
+      "team": "Meksyk",
+      "player": "Santiago Gimenez",
+      "minute": 78,
+      "detail": "goal",
+      "evidence_id": "e_ms_mex_goal"
+    }
+  ],
+  "key_events": [
+    {
+      "minute": 23,
+      "event": "RPA objela prowadzenie po stalym fragmencie gry.",
+      "evidence_id": "e_ms_rsa_goal"
+    },
+    {
+      "minute": 78,
+      "event": "Meksyk wyrownal w koncowce meczu otwarcia.",
+      "evidence_id": "e_ms_mex_goal"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e_ms_result",
+      "claim": "Mecz otwarcia zakonczyl sie remisem 1-1.",
+      "value": "1-1",
+      "source_url": "fixture://mexico_rpa_opener_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-11T22:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_ms_rsa_goal",
+      "claim": "Lyle Foster strzelil gola dla RPA w 23. minucie.",
+      "value": "Lyle Foster 23'",
+      "source_url": "fixture://mexico_rpa_opener_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-11T22:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_ms_mex_goal",
+      "claim": "Santiago Gimenez wyrownal dla Meksyku w 78. minucie.",
+      "value": "Santiago Gimenez 78'",
+      "source_url": "fixture://mexico_rpa_opener_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-11T22:00:00+02:00",
+      "confidence": "high"
+    }
+  ],
+  "media": [
+    {
+      "country": "Meksyk",
+      "outlet": "ElUniversalMX",
+      "language": "es",
+      "url": "https://www.eluniversal.com.mx/deportes/mundial-mexico-sudafrica/",
+      "evidence_id": "e_mx_universal",
+      "retrieved_at": "2026-06-11T23:05:00+02:00",
+      "confidence": "high",
+      "original_text": "Otra vez el mismo guion: el Tri arranca el Mundial con mas dudas que certezas y deja escapar dos puntos que van a pesar.",
+      "translation_pl": "Znowu ten sam scenariusz: Tri zaczyna mundial z wiekszymi watpliwosciami niz pewnoscia i traci dwa punkty, ktore beda ciazyc."
+    },
+    {
+      "country": "Meksyk",
+      "outlet": "RecordMX",
+      "language": "es",
+      "url": "https://www.record.com.mx/futbol-mundial/mexico-sudafrica",
+      "evidence_id": "e_mx_record",
+      "retrieved_at": "2026-06-11T23:10:00+02:00",
+      "confidence": "high",
+      "original_text": "Decepcion en el arranque: Mexico volvio a quedar a deber ante una seleccion que vendio cara su piel hasta el final.",
+      "translation_pl": "Rozczarowanie na otwarcie: Meksyk znowu zostawil niedosyt w starciu z reprezentacja, ktora do konca drogo sprzedala skore."
+    },
+    {
+      "country": "RPA",
+      "outlet": "News24ZA",
+      "language": "en",
+      "url": "https://www.news24.com/sport/soccer/bafana-mexico-opener",
+      "evidence_id": "e_za_news24",
+      "retrieved_at": "2026-06-11T23:08:00+02:00",
+      "confidence": "high",
+      "original_text": "Bafana Bafana walk away with heads held high after standing toe to toe with one of the tournament favourites.",
+      "translation_pl": "Bafana Bafana schodza z boiska z podniesionymi glowami po tym, jak postawili sie jednemu z faworytow turnieju."
+    },
+    {
+      "country": "RPA",
+      "outlet": "SuperSportZA",
+      "language": "en",
+      "url": "https://supersport.com/football/world-cup/bafana-draw",
+      "evidence_id": "e_za_supersport",
+      "retrieved_at": "2026-06-11T23:12:00+02:00",
+      "confidence": "high",
+      "original_text": "A point that feels like a statement: South Africa showed they belong on this stage.",
+      "translation_pl": "Punkt, ktory smakuje jak manifest: RPA pokazala, ze nalezy do tej sceny."
+    }
+  ]
+}

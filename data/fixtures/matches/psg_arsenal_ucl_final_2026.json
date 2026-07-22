@@ -1,0 +1,261 @@
+{
+  "match_id": "psg_arsenal_ucl_final_2026",
+  "aliases": [
+    "PSG - Arsenal",
+    "Paris Saint-Germain - Arsenal",
+    "final Ligi Mistrzow 2026",
+    "UEFA Champions League final 2026 PSG Arsenal",
+    "PSG Arsenal final LM"
+  ],
+  "competition": "UEFA Champions League",
+  "stage": "final",
+  "date": "2026-05-30",
+  "venue": "Puskas Arena, Budapest",
+  "teams": {
+    "home": "Paris Saint-Germain",
+    "away": "Arsenal"
+  },
+  "score": {
+    "full_time": "1-1",
+    "after_extra_time": "1-1",
+    "penalties": "4-3",
+    "winner": "Paris Saint-Germain"
+  },
+  "fact_source_ids": [
+    "e_match_result",
+    "e_penalties",
+    "e_havertz_goal",
+    "e_dembele_goal"
+  ],
+  "goals": [
+    {
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "minute": 6,
+      "detail": "goal",
+      "evidence_id": "e_havertz_goal"
+    },
+    {
+      "team": "Paris Saint-Germain",
+      "player": "Ousmane Dembele",
+      "minute": 64,
+      "detail": "penalty",
+      "evidence_id": "e_dembele_goal"
+    }
+  ],
+  "key_events": [
+    {
+      "minute": 6,
+      "event": "Arsenal objal prowadzenie po kontrataku.",
+      "evidence_id": "e_havertz_goal"
+    },
+    {
+      "minute": 64,
+      "event": "Paris Saint-Germain wyrownal z rzutu karnego.",
+      "evidence_id": "e_dembele_goal"
+    },
+    {
+      "minute": 120,
+      "event": "Final rozstrzygnela seria rzutow karnych.",
+      "evidence_id": "e_penalties"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e_match_result",
+      "claim": "Final zakonczyl sie remisem 1-1 po dogrywce.",
+      "value": "1-1 after extra time",
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_penalties",
+      "claim": "Paris Saint-Germain wygral serie rzutow karnych 4-3.",
+      "value": "PSG 4-3 Arsenal on penalties",
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_havertz_goal",
+      "claim": "Kai Havertz strzelil gola dla Arsenalu w 6. minucie.",
+      "value": "Kai Havertz 6'",
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_dembele_goal",
+      "claim": "Ousmane Dembele wyrownal dla PSG z rzutu karnego w 64. minucie.",
+      "value": "Ousmane Dembele 64' penalty",
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_possession",
+      "claim": "Paris Saint-Germain mial 61% posiadania pilki, a Arsenal 39%.",
+      "value": {
+        "Paris Saint-Germain": 61,
+        "Arsenal": 39
+      },
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/team_stats",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_shots",
+      "claim": "Paris Saint-Germain oddal 17 strzalow, a Arsenal 8.",
+      "value": {
+        "Paris Saint-Germain": 17,
+        "Arsenal": 8
+      },
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/team_stats",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_shots_on_target",
+      "claim": "Paris Saint-Germain oddal 6 strzalow celnych, a Arsenal 3.",
+      "value": {
+        "Paris Saint-Germain": 6,
+        "Arsenal": 3
+      },
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/team_stats",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_corners",
+      "claim": "Paris Saint-Germain mial 8 rzutow roznych, a Arsenal 3.",
+      "value": {
+        "Paris Saint-Germain": 8,
+        "Arsenal": 3
+      },
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/team_stats",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "e_narrative_arsenal_bus",
+      "claim": "Czesc narracji po meczu skupiala sie na defensywnym planie Arsenalu po szybkim golu.",
+      "value": "Arsenal deep block narrative",
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/narratives",
+      "source_tier": "C",
+      "provider": "OfflineNarrativeFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "medium"
+    },
+    {
+      "id": "e_narrative_psg_pressure",
+      "claim": "Czesc narracji po meczu wskazywala, ze PSG mialo przewage z pilka, ale potrzebowalo karnych.",
+      "value": "PSG pressure without early finish narrative",
+      "source_url": "fixture://psg_arsenal_ucl_final_2026/narratives",
+      "source_tier": "C",
+      "provider": "OfflineNarrativeFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "medium"
+    }
+  ],
+  "metrics": {
+    "provider": "OfflineMetricFixture",
+    "retrieved_at": "2026-06-10T00:00:00+02:00",
+    "source_ids": [
+      "e_possession",
+      "e_shots",
+      "e_shots_on_target",
+      "e_corners"
+    ],
+    "metric_warnings": [
+      "xG unavailable in this fixture, do not use xG-based angles.",
+      "PPDA unavailable in this fixture, do not use pressing-based angles."
+    ],
+    "team_metrics": {
+      "Paris Saint-Germain": {
+        "possession": {
+          "label": "posiadanie pilki",
+          "value": 61,
+          "unit": "%",
+          "evidence_id": "e_possession"
+        },
+        "shots": {
+          "label": "strzaly",
+          "value": 17,
+          "unit": "",
+          "evidence_id": "e_shots"
+        },
+        "shots_on_target": {
+          "label": "strzaly celne",
+          "value": 6,
+          "unit": "",
+          "evidence_id": "e_shots_on_target"
+        },
+        "corners": {
+          "label": "rzuty rozne",
+          "value": 8,
+          "unit": "",
+          "evidence_id": "e_corners"
+        }
+      },
+      "Arsenal": {
+        "possession": {
+          "label": "posiadanie pilki",
+          "value": 39,
+          "unit": "%",
+          "evidence_id": "e_possession"
+        },
+        "shots": {
+          "label": "strzaly",
+          "value": 8,
+          "unit": "",
+          "evidence_id": "e_shots"
+        },
+        "shots_on_target": {
+          "label": "strzaly celne",
+          "value": 3,
+          "unit": "",
+          "evidence_id": "e_shots_on_target"
+        },
+        "corners": {
+          "label": "rzuty rozne",
+          "value": 3,
+          "unit": "",
+          "evidence_id": "e_corners"
+        }
+      }
+    },
+    "player_metrics": []
+  },
+  "narratives": [
+    {
+      "narrative": "Arsenal bronil nisko po szybkim golu i oddal PSG inicjatywe.",
+      "source_type": "media",
+      "evidence_id": "e_narrative_arsenal_bus",
+      "verification_status": "narrative_only"
+    },
+    {
+      "narrative": "PSG mialo przewage z pilka, ale nie zamknelo meczu przed karnymi.",
+      "source_type": "media",
+      "evidence_id": "e_narrative_psg_pressure",
+      "verification_status": "narrative_only"
+    }
+  ]
+}
+

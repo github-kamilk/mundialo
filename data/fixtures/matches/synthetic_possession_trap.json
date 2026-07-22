@@ -1,0 +1,134 @@
+{
+  "match_id": "synthetic_possession_trap",
+  "aliases": [
+    "test possession trap",
+    "Synthetic FC - Counter FC"
+  ],
+  "competition": "Synthetic Cup",
+  "stage": "group",
+  "date": "2026-06-01",
+  "venue": "Fixture Stadium",
+  "teams": {
+    "home": "Synthetic FC",
+    "away": "Counter FC"
+  },
+  "score": {
+    "full_time": "0-1",
+    "after_extra_time": null,
+    "penalties": null,
+    "winner": "Counter FC"
+  },
+  "fact_source_ids": [
+    "s_match_result"
+  ],
+  "goals": [],
+  "key_events": [],
+  "evidence": [
+    {
+      "id": "s_match_result",
+      "claim": "Counter FC wygral 1-0.",
+      "value": "0-1",
+      "source_url": "fixture://synthetic_possession_trap/match_report",
+      "source_tier": "A",
+      "provider": "OfflineVerifiedFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "s_possession",
+      "claim": "Synthetic FC mial 68% posiadania pilki, a Counter FC 32%.",
+      "value": {
+        "Synthetic FC": 68,
+        "Counter FC": 32
+      },
+      "source_url": "fixture://synthetic_possession_trap/team_stats",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "s_shots",
+      "claim": "Synthetic FC oddal 14 strzalow, a Counter FC 7.",
+      "value": {
+        "Synthetic FC": 14,
+        "Counter FC": 7
+      },
+      "source_url": "fixture://synthetic_possession_trap/team_stats",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    },
+    {
+      "id": "s_shots_on_target",
+      "claim": "Synthetic FC oddal 2 strzaly celne, a Counter FC 4.",
+      "value": {
+        "Synthetic FC": 2,
+        "Counter FC": 4
+      },
+      "source_url": "fixture://synthetic_possession_trap/team_stats",
+      "source_tier": "B",
+      "provider": "OfflineMetricFixture",
+      "retrieved_at": "2026-06-10T00:00:00+02:00",
+      "confidence": "high"
+    }
+  ],
+  "metrics": {
+    "provider": "OfflineMetricFixture",
+    "retrieved_at": "2026-06-10T00:00:00+02:00",
+    "source_ids": [
+      "s_possession",
+      "s_shots",
+      "s_shots_on_target"
+    ],
+    "metric_warnings": [
+      "xG unavailable in this fixture."
+    ],
+    "team_metrics": {
+      "Synthetic FC": {
+        "possession": {
+          "label": "posiadanie pilki",
+          "value": 68,
+          "unit": "%",
+          "evidence_id": "s_possession"
+        },
+        "shots": {
+          "label": "strzaly",
+          "value": 14,
+          "unit": "",
+          "evidence_id": "s_shots"
+        },
+        "shots_on_target": {
+          "label": "strzaly celne",
+          "value": 2,
+          "unit": "",
+          "evidence_id": "s_shots_on_target"
+        }
+      },
+      "Counter FC": {
+        "possession": {
+          "label": "posiadanie pilki",
+          "value": 32,
+          "unit": "%",
+          "evidence_id": "s_possession"
+        },
+        "shots": {
+          "label": "strzaly",
+          "value": 7,
+          "unit": "",
+          "evidence_id": "s_shots"
+        },
+        "shots_on_target": {
+          "label": "strzaly celne",
+          "value": 4,
+          "unit": "",
+          "evidence_id": "s_shots_on_target"
+        }
+      }
+    },
+    "player_metrics": []
+  },
+  "narratives": []
+}
+

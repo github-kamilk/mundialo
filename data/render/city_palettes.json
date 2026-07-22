@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "description": "Palety kolorow karuzeli per miasto-gospodarz MS 2026. Wlasne palety redakcyjne INSPIROWANE identyfikacjami miast (nie oficjalne hexy FIFA). Ciemne tla + miejski akcent: tekst (--ink) zawsze jasny, wiec kontrast jest stabilny. aliases: dopasowywane (fold_ascii, substring) do pola venue/city z terminarza lub faktow.",
+  "default": {
+    "accent": "#e9c46a",
+    "accent_2": "#5dd6c0",
+    "glow_a": "#1c2b4d",
+    "glow_b": "#15243f",
+    "bg_top": "#0d1426",
+    "bg_bottom": "#0a0e1b"
+  },
+  "cities": [
+    {
+      "city": "Mexico City",
+      "aliases": ["mexico city", "ciudad de mexico", "cdmx", "estadio azteca", "estadio ciudad de mexico", "azteca"],
+      "palette": {"accent": "#ff5fa2", "accent_2": "#3ddc97", "glow_a": "#43163a", "glow_b": "#1d1038", "bg_top": "#180a1c", "bg_bottom": "#0c0714"}
+    },
+    {
+      "city": "Guadalajara",
+      "aliases": ["guadalajara", "zapopan", "estadio akron", "estadio guadalajara", "akron"],
+      "palette": {"accent": "#ff8c42", "accent_2": "#58a6ff", "glow_a": "#3f2210", "glow_b": "#16233f", "bg_top": "#170f09", "bg_bottom": "#0b0a12"}
+    },
+    {
+      "city": "Monterrey",
+      "aliases": ["monterrey", "estadio bbva", "estadio monterrey", "guadalupe"],
+      "palette": {"accent": "#5aa9ff", "accent_2": "#9ad1d4", "glow_a": "#11294a", "glow_b": "#0e2233", "bg_top": "#0a1322", "bg_bottom": "#070d17"}
+    },
+    {
+      "city": "Atlanta",
+      "aliases": ["atlanta", "mercedes-benz stadium", "atlanta stadium"],
+      "palette": {"accent": "#ff9b71", "accent_2": "#c0533e", "glow_a": "#3c1c14", "glow_b": "#241327", "bg_top": "#160d0c", "bg_bottom": "#0d0810"}
+    },
+    {
+      "city": "Boston",
+      "aliases": ["boston", "foxborough", "gillette stadium", "boston stadium"],
+      "palette": {"accent": "#46b97c", "accent_2": "#6f9ddb", "glow_a": "#0f2e22", "glow_b": "#13233c", "bg_top": "#0a1510", "bg_bottom": "#080d15"}
+    },
+    {
+      "city": "Dallas",
+      "aliases": ["dallas", "arlington", "at&t stadium", "dallas stadium"],
+      "palette": {"accent": "#4f76ff", "accent_2": "#c8d2e8", "glow_a": "#15244e", "glow_b": "#101a33", "bg_top": "#0a0f20", "bg_bottom": "#070a15"}
+    },
+    {
+      "city": "Houston",
+      "aliases": ["houston", "nrg stadium", "houston stadium"],
+      "palette": {"accent": "#2ec5d3", "accent_2": "#e2574c", "glow_a": "#0e2f36", "glow_b": "#251018", "bg_top": "#08161a", "bg_bottom": "#070b10"}
+    },
+    {
+      "city": "Kansas City",
+      "aliases": ["kansas city", "arrowhead", "kansas city stadium"],
+      "palette": {"accent": "#4fc3f7", "accent_2": "#e2574c", "glow_a": "#102c40", "glow_b": "#301015", "bg_top": "#0a141e", "bg_bottom": "#0b0810"}
+    },
+    {
+      "city": "Los Angeles",
+      "aliases": ["los angeles", "inglewood", "sofi stadium", "los angeles stadium"],
+      "palette": {"accent": "#b07cff", "accent_2": "#ffd166", "glow_a": "#2c1a4e", "glow_b": "#3a2a12", "bg_top": "#120c20", "bg_bottom": "#0b0712"}
+    },
+    {
+      "city": "Miami",
+      "aliases": ["miami", "miami gardens", "hard rock stadium", "miami stadium"],
+      "palette": {"accent": "#ff6fae", "accent_2": "#35e0d0", "glow_a": "#3c1230", "glow_b": "#0e3331", "bg_top": "#170a16", "bg_bottom": "#07100f"}
+    },
+    {
+      "city": "New York New Jersey",
+      "aliases": ["new york", "new jersey", "nowy jork", "east rutherford", "metlife", "new york new jersey stadium"],
+      "palette": {"accent": "#ffd23f", "accent_2": "#7c93c4", "glow_a": "#33290d", "glow_b": "#141f38", "bg_top": "#12100a", "bg_bottom": "#090c15"}
+    },
+    {
+      "city": "Philadelphia",
+      "aliases": ["philadelphia", "filadelfia", "lincoln financial field", "philadelphia stadium"],
+      "palette": {"accent": "#6c8cff", "accent_2": "#d9a85e", "glow_a": "#16224a", "glow_b": "#2e2310", "bg_top": "#0b0f1f", "bg_bottom": "#0a0a12"}
+    },
+    {
+      "city": "San Francisco Bay Area",
+      "aliases": ["san francisco", "santa clara", "bay area", "levi's stadium", "levis stadium", "san francisco bay area stadium"],
+      "palette": {"accent": "#f4a259", "accent_2": "#4f9ea8", "glow_a": "#3a2410", "glow_b": "#0f2a2e", "bg_top": "#140e08", "bg_bottom": "#081012"}
+    },
+    {
+      "city": "Seattle",
+      "aliases": ["seattle", "lumen field", "seattle stadium"],
+      "palette": {"accent": "#4cc28e", "accent_2": "#7aa7d9", "glow_a": "#0f3024", "glow_b": "#13233c", "bg_top": "#091410", "bg_bottom": "#080d15"}
+    },
+    {
+      "city": "Toronto",
+      "aliases": ["toronto", "bmo field", "toronto stadium"],
+      "palette": {"accent": "#ff5a5f", "accent_2": "#9fb4cc", "glow_a": "#3c1316", "glow_b": "#16202e", "bg_top": "#170b0c", "bg_bottom": "#090c12"}
+    },
+    {
+      "city": "Vancouver",
+      "aliases": ["vancouver", "bc place", "vancouver stadium"],
+      "palette": {"accent": "#45b8e8", "accent_2": "#57d99a", "glow_a": "#0f2b3c", "glow_b": "#0f2e22", "bg_top": "#08131c", "bg_bottom": "#07100c"}
+    }
+  ]
+}

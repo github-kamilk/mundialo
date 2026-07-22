@@ -1,0 +1,15 @@
+{
+  "id": "conflicting_sources",
+  "match_query": "PSG - Arsenal konflikt zrodel",
+  "expected_status": "needs_human_review",
+  "must_have_checks": [
+    "all_claims_have_evidence"
+  ],
+  "must_fail_checks": [
+    "no_source_conflicts"
+  ],
+  "expected_blocking": [
+    "source_conflicts"
+  ],
+  "forbidden_terms_in_copy": ["xG", "PPDA"]
+}

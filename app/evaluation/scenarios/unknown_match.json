@@ -1,0 +1,9 @@
+{
+  "id": "unknown_match",
+  "match_query": "Atlantis FC - Moon United",
+  "expected_status": "insufficient_evidence",
+  "must_have_checks": [],
+  "must_fail_checks": [],
+  "expected_blocking": [],
+  "forbidden_terms_in_copy": []
+}
