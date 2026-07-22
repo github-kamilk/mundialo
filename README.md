@@ -113,7 +113,7 @@ The full war-story writeup with the engineering lessons: **[CASE_STUDY.md](CASE_
 | `.claude/skills/debug-match-content/` | Claude Code skill encoding the triage tree from symptom to fix — the ops runbook as an executable skill |
 | `tests/` | 431 tests, offline, ~5 s, no API keys required |
 
-Design docs (Polish): `architektura-redakcji-ai-mundial-instagram.md` (system),
+Design docs (Polish, in [`docs/design/`](docs/design/)): `architektura-redakcji-ai-mundial-instagram.md` (system),
 `architektura-relacje-medialne.md` (media track), `architektura-pamiec-epizodyczna.md`
 (episodic memory), `architektura-warstwy-graficznej.md` (rendering), `glos-redakcji.md`
 (editorial voice), `runbook-mecz.md` (match-day ops).

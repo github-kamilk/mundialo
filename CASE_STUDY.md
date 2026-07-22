@@ -204,7 +204,7 @@ inspectable (`run.json` audit trail), and make degradation loud.
   `OffTopicDemonymFilterTests`, `PostMatchGateTests`, `SalvageDiagnosticsTests`).
 - Honest gap, kept deliberately: eval results are not persisted across runs, so "did
   this prompt change help?" was answered by eyeball plus the regression suite. A
-  persisted leaderboard with per-axis diffs is specced in `pomysly.md`; it is the
+  persisted leaderboard with per-axis diffs is specced in `docs/design/pomysly.md`; it is the
   first thing I would build if the project came back for another tournament.
 
 ## 5. Numbers

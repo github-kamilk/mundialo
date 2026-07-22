@@ -3,15 +3,15 @@
 > **Uwaga:** ten dokument opisuje stan projektu z fazy MVP (czerwiec 2026,
 > fixture'y zamiast żywego retrievalu) i został zachowany jako zapis historyczny.
 > Aktualny opis systemu: [README.md](README.md) (EN). Szczegóły architektury po
-> polsku: `architektura-*.md`.
+> polsku: `docs/design/architektura-*.md`.
 
-Uruchamialny MVP systemu opisanego w `architektura-redakcji-ai-mundial-instagram.md`.
+Uruchamialny MVP systemu opisanego w `docs/design/architektura-redakcji-ai-mundial-instagram.md`.
 
 System ma **dwa tory tresci**, wybierane przez `MatchRequest.post_type`:
 
 - **`media_reaction` (glowny, domyslny)** — „jak mecz odebraly media obu krajow?".
   Karuzela: slajd tytulowy -> max 2 slajdy kraj A -> max 2 slajdy kraj B -> slajd ze
-  zrodlami. Szczegoly: `architektura-relacje-medialne.md`.
+  zrodlami. Szczegoly: `docs/design/architektura-relacje-medialne.md`.
 - **`data_story` (wtorny)** — pelny pipeline danych:
 
 ```text
@@ -51,7 +51,7 @@ python -m unittest discover -s tests
   (integralnosc provider/tier, regula "Tier C != fakt");
 - `EvidenceStore` pilnujacy, zeby claimy mialy zrodla, i wykrywajacy konflikty zrodel;
 - role redakcyjne: researcher, data hunter, narrative scout, metric analyst, angle editor, copywriter;
-- glos redakcji jako semantic memory (`VoiceProfile` z `glos-redakcji.md`):
+- glos redakcji jako semantic memory (`VoiceProfile` z `docs/design/glos-redakcji.md`):
   atrybuty, banned phrases (w tym nadmierne uogolnienia typu "caly kraj"), wzorce
   hookow, pary few-shot (osobne dla toru medialnego); wstrzykiwany bezposrednio do
   agentow LLM (`copy` / `media_translate` / `media_editorial`);

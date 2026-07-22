@@ -96,7 +96,7 @@ Czytając `notes` szukaj wzorców:
 
 ### A. Za wcześnie po meczu (najczęstsze, NIE błąd)
 notes: same `live`/`online-prenos`/`preview`, `scout: 0 cytatow`, jeden lub oba kraje 0.
-→ Powtórz run 2–3 h po meczu lub rano. Patrz `runbook-mecz.md`, sekcja o timingu.
+→ Powtórz run 2–3 h po meczu lub rano. Patrz `docs/design/runbook-mecz.md`, sekcja o timingu.
 
 ### B. Zły wynik / post o innym meczu
 Wynik na grafice się nie zgadza, albo treść dotyczy innego spotkania.
@@ -142,7 +142,7 @@ $env:TAVILY_API_KEY = [Environment]::GetEnvironmentVariable('TAVILY_API_KEY','Us
 
 ### G. Strażnik jakości/głosu zablokował
 quality blocking: `no_banned_phrases`, `score_only_on_title_slide`, `mood_requires_two_sources`,
-`both_countries_present`. To kontrakt głosu z `glos-redakcji.md`. Zwykle samonaprawialne przy
+`both_countries_present`. To kontrakt głosu z `docs/design/glos-redakcji.md`. Zwykle samonaprawialne przy
 ponownym runie (LLM dostaje feedback i ponawia). Jeśli powtarzalne — popraw prompt w
 `app/agents/media_reaction.py` (translator/editorial) lub regułę w `app/evaluation/judges.py`,
 zgodnie z biblią stylu.
@@ -158,7 +158,7 @@ zgodnie z biblią stylu.
   `MediaQualityJudge`.
 - `data/sources/country_media.json` — outlety, domeny, `sections` per kraj.
 - `data/schedule/world_cup_2026.json` — terminarz (data/miasto/stadion meczu).
-- `runbook-mecz.md` — wiedza operacyjna o timingu i oknach.
+- `docs/design/runbook-mecz.md` — wiedza operacyjna o timingu i oknach.
 
 ## Re-run i weryfikacja
 
